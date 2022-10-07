@@ -43,6 +43,10 @@ namespace Scanner {
             STATE_DEC_FLOAT,
             STATE_DEC_FLOAT_PRE,
             STATE_DEC_FLOAT_SIGN,
+            STATE_COMMENT_LINE,
+            STATE_COMMENT_PARAGRAPH,
+            STATE_TO_COMMENT,
+            STATE_END_COMMENT,
             STATE_EMPTY
         };
 
@@ -78,12 +82,14 @@ namespace Scanner {
             if(!(m_file_out->is_open()))SCANNER_CORE_ERROR("Out File Open Error!");
         }
 
+        CHAR_TYPE char2CharType(char source);
+
         void Run();
 
         void OutputInfo();
 
         void reportError();
-        void reportResult(int categoryCode);
+        void reportResult(int categoryCode, std::string text ="");
 
     private:
         Scanner();
