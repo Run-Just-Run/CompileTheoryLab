@@ -13,6 +13,8 @@ namespace Scanner {
         NEWLINE,
         WHITE_SPACE_CHAR,
         UNDERSCORE,
+        DOT,
+        SIGN,
         UNKNOWN_TYPE
     };
 
@@ -31,6 +33,16 @@ namespace Scanner {
             STATE_INT_OCT,
             STATE_INT_HEX_PRE,
             STATE_INT_HEX,
+            STATE_DEC_DOT,
+            STATE_DEC_DOT_BEGIN,
+            STATE_HEX_DOT,
+            STATE_HEX_FLOAT_PRE,
+            STATE_HEX_FLOAT,
+            STATE_HEX_FLOAT_SIGN,
+            STATE_HEX_FLOAT_READY,
+            STATE_DEC_FLOAT,
+            STATE_DEC_FLOAT_PRE,
+            STATE_DEC_FLOAT_SIGN,
             STATE_EMPTY
         };
 
