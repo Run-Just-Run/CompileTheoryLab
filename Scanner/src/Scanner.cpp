@@ -317,7 +317,7 @@ namespace Scanner
                         m_Text+=m_Char;
                     if      (m_Char=='=')                                                                                {OutputInfo();m_State=STATE::STATE_BEGIN;}
                     else if (c==CHAR_TYPE::NEWLINE||c==CHAR_TYPE::WHITE_SPACE_CHAR)                                      {m_Char=m_Text[0];OutputInfo();m_State=STATE::STATE_BEGIN;}
-                    else if (c==CHAR_TYPE::SINGLE_SIGN)                                                                  {m_Char=m_Text[0];OutputInfo();m_State=STATE::STATE_BEGIN;}
+                    else if (c==CHAR_TYPE::SINGLE_SIGN)                                                                  {m_Text.pop_back();OutputInfo();m_State=STATE::STATE_BEGIN;}
                     else if (c==CHAR_TYPE::ALPHA||c==CHAR_TYPE::UNDERSCORE)                                              {m_Char=m_Text[0];m_Text=m_Text.substr(1,m_Text.size()-1);OutputInfo();m_State=STATE::STATE_IDENT;}
                     else if (c==CHAR_TYPE::DIGIT&&m_Char!='0')                                                           {m_Char=m_Text[0];m_Text=m_Text.substr(1,m_Text.size()-1);OutputInfo();m_State=STATE::STATE_INT_DEC;}
                     else if (m_Char=='0')                                                                                {m_Char=m_Text[0];m_Text=m_Text.substr(1,m_Text.size()-1);OutputInfo();m_State=STATE::STATE_PREFIX_ZERO;}
@@ -380,8 +380,11 @@ namespace Scanner
             }
             else
             {
+                char temp_c = m_Char;
+                if(char2CharType(m_Char)==CHAR_TYPE::SINGLE_SIGN)
+                    temp_c=m_Text[0];
                 std::string temp="";
-                temp+=m_Char;
+                temp+=temp_c;
                 reportResult(4,temp);
             }
         }
