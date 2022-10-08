@@ -14,7 +14,9 @@ namespace Scanner {
         WHITE_SPACE_CHAR,
         UNDERSCORE,
         DOT,
-        SIGN,
+        SINGLE_SIGN,
+        DOUBLE_SIGN,
+        SLASH,
         UNKNOWN_TYPE
     };
 
@@ -45,6 +47,9 @@ namespace Scanner {
             STATE_DEC_FLOAT_SIGN,
             STATE_COMMENT_LINE,
             STATE_COMMENT_PARAGRAPH,
+            STATE_WAIT_EQUAL,
+            STATE_WAIT_AND,
+            STATE_WAIT_OR,
             STATE_TO_COMMENT,
             STATE_END_COMMENT,
             STATE_EMPTY

@@ -20,11 +20,16 @@ namespace Scanner
         else if (source == '\t'|| source == ' '|| source == '\012'|| source == '\b')        return CHAR_TYPE::WHITE_SPACE_CHAR;
         else if (source == '_')                                                             return CHAR_TYPE::UNDERSCORE;
         else if (source == '.')                                                             return CHAR_TYPE::DOT;
+        else if (source == '/')                                                             return CHAR_TYPE::SLASH;
         else if (source == '+'||source == '-'||
-                 source == '*'||source == '|'||
-                 source == '&'||source == '!'||
-                 source == '>'||source == '<'||
-                 source == '/')                                                             return CHAR_TYPE::SIGN;
+                 source == '*'||source == '['||
+                 source == ']'||source == '{'||
+                 source == '}'||source == '('||
+                 source == ')'||source == ','||
+                 source == ';')                                                             return CHAR_TYPE::SINGLE_SIGN;
+        else if (source == '|'||source == '&'||
+                 source == '!'||source == '>'||
+                 source == '<'||source == '=')                                              return CHAR_TYPE::DOUBLE_SIGN;
         else if (m_State==STATE::STATE_COMMENT_LINE||
                  m_State==STATE::STATE_COMMENT_PARAGRAPH)                                   return CHAR_TYPE::UNKNOWN_TYPE;
         else {
@@ -72,6 +77,10 @@ namespace Scanner
                 {
                     m_Text="";
                     if      (c==CHAR_TYPE::NEWLINE||c==CHAR_TYPE::WHITE_SPACE_CHAR)                                      {if(m_Text!="")OutputInfo();m_State=STATE::STATE_BEGIN;}
+                    else if (c==CHAR_TYPE::SINGLE_SIGN)                                                                  {OutputInfo();m_State=STATE::STATE_BEGIN;}
+                    else if (m_Char=='|')                                                                                {m_Text+=m_Char;m_State=STATE::STATE_WAIT_OR;}
+                    else if (m_Char=='&')                                                                                {m_Text+=m_Char;m_State=STATE::STATE_WAIT_AND;}
+                    else if (m_Char=='<'||m_Char=='>'||m_Char=='!'||m_Char=='=')                                         {m_State=STATE::STATE_WAIT_EQUAL;m_Text+=m_Char;}
                     else if (c==CHAR_TYPE::ALPHA||c==CHAR_TYPE::UNDERSCORE)                                              {m_State=STATE::STATE_IDENT;m_Text+=m_Char;}
                     else if (c==CHAR_TYPE::DIGIT&&m_Char!='0')                                                           {m_State=STATE::STATE_INT_DEC;m_Text+=m_Char;}
                     else if (m_Char=='0')                                                                                {m_State=STATE::STATE_PREFIX_ZERO;m_Text+=m_Char;}
@@ -90,10 +99,14 @@ namespace Scanner
                 }
                 case STATE::STATE_PREFIX_ZERO:
                 {
-                    if(c!=CHAR_TYPE::WHITE_SPACE_CHAR&&c!=CHAR_TYPE::NEWLINE&&m_Char!='/')
+                    if(c!=CHAR_TYPE::WHITE_SPACE_CHAR&&c!=CHAR_TYPE::NEWLINE&&m_Char!='/'&&c!=CHAR_TYPE::SINGLE_SIGN)
                         m_Text+=m_Char;
                     if      (c==CHAR_TYPE::NEWLINE||c==CHAR_TYPE::WHITE_SPACE_CHAR)                                      {OutputInfo();m_State=STATE::STATE_BEGIN;}
                     else if (m_Char == '/')                                                                              {OutputInfo();m_State=STATE::STATE_TO_COMMENT;}
+                    else if (c==CHAR_TYPE::SINGLE_SIGN)                                                                  {OutputInfo();m_State=STATE::STATE_BEGIN;}
+                    else if (m_Char=='|')                                                                                {m_Text.pop_back();OutputInfo();m_Text="|";m_State=STATE::STATE_WAIT_OR;}
+                    else if (m_Char=='&')                                                                                {m_Text.pop_back();OutputInfo();m_Text="&";m_State=STATE::STATE_WAIT_AND;}
+                    else if (m_Char=='<'||m_Char=='>'||m_Char=='!'||m_Char=='=')                                         {m_Text.pop_back();OutputInfo();m_Text="";m_Text+=m_Char;m_State=STATE::STATE_WAIT_EQUAL;}
                     else if (m_Char=='x'||m_Char=='X')                                                                   {m_State=STATE::STATE_INT_HEX;}
                     else if (m_Char<='7'&&m_Char>='0')                                                                   {m_State=STATE::STATE_INT_OCT;}
                     else                                                                                                 {reportError();}
@@ -109,10 +122,14 @@ namespace Scanner
                 }
                 case STATE::STATE_INT_HEX:
                 {
-                    if(c!=CHAR_TYPE::WHITE_SPACE_CHAR&&c!=CHAR_TYPE::NEWLINE&&m_Char!='/')
+                    if(c!=CHAR_TYPE::WHITE_SPACE_CHAR&&c!=CHAR_TYPE::NEWLINE&&m_Char!='/'&&c!=CHAR_TYPE::SINGLE_SIGN)
                         m_Text+=m_Char;
                     if      (c==CHAR_TYPE::NEWLINE||c==CHAR_TYPE::WHITE_SPACE_CHAR)                                      {OutputInfo();m_State=STATE::STATE_BEGIN;}
                     else if (m_Char == '/')                                                                              {OutputInfo();m_State=STATE::STATE_TO_COMMENT;}
+                    else if (c==CHAR_TYPE::SINGLE_SIGN)                                                                  {OutputInfo();m_State=STATE::STATE_BEGIN;}
+                    else if (m_Char=='|')                                                                                {m_Text.pop_back();OutputInfo();m_Text="|";m_State=STATE::STATE_WAIT_OR;}
+                    else if (m_Char=='&')                                                                                {m_Text.pop_back();OutputInfo();m_Text="&";m_State=STATE::STATE_WAIT_AND;}
+                    else if (m_Char=='<'||m_Char=='>'||m_Char=='!'||m_Char=='=')                                         {m_Text.pop_back();OutputInfo();m_Text="";m_Text+=m_Char;m_State=STATE::STATE_WAIT_EQUAL;}
                     else if (c==CHAR_TYPE::DIGIT||(m_Char<='f'&&m_Char>='a')||(m_Char<='F'&&m_Char>='A'))                {m_State=STATE::STATE_INT_HEX;}
                     else if (m_Char=='p'||m_Char=='P')                                                                   {m_State=STATE::STATE_HEX_FLOAT_PRE;}
                     else if (c==CHAR_TYPE::DOT)                                                                          {m_State=STATE::STATE_HEX_DOT;}
@@ -138,10 +155,14 @@ namespace Scanner
                 }
                 case STATE::STATE_HEX_FLOAT_READY:
                 {
-                    if(c!=CHAR_TYPE::WHITE_SPACE_CHAR&&c!=CHAR_TYPE::NEWLINE&&m_Char!='/')
+                    if(c!=CHAR_TYPE::WHITE_SPACE_CHAR&&c!=CHAR_TYPE::NEWLINE&&m_Char!='/'&&c!=CHAR_TYPE::SINGLE_SIGN)
                         m_Text+=m_Char;
                     if      (c==CHAR_TYPE::NEWLINE||c==CHAR_TYPE::WHITE_SPACE_CHAR)                                      {OutputInfo();m_State=STATE::STATE_BEGIN;}
                     else if (m_Char == '/')                                                                              {OutputInfo();m_State=STATE::STATE_TO_COMMENT;}
+                    else if (c==CHAR_TYPE::SINGLE_SIGN)                                                                  {OutputInfo();m_State=STATE::STATE_BEGIN;}
+                    else if (m_Char=='|')                                                                                {m_Text.pop_back();OutputInfo();m_Text="|";m_State=STATE::STATE_WAIT_OR;}
+                    else if (m_Char=='&')                                                                                {m_Text.pop_back();OutputInfo();m_Text="&";m_State=STATE::STATE_WAIT_AND;}
+                    else if (m_Char=='<'||m_Char=='>'||m_Char=='!'||m_Char=='=')                                         {m_Text.pop_back();OutputInfo();m_Text="";m_Text+=m_Char;m_State=STATE::STATE_WAIT_EQUAL;}
                     else if (c==CHAR_TYPE::DIGIT)                                                                        {m_State=STATE::STATE_HEX_FLOAT_READY;}
                     else                                                                                                 {reportError();}
                     break;
@@ -165,20 +186,28 @@ namespace Scanner
                 }
                 case STATE::STATE_INT_OCT:
                 {
-                    if(c!=CHAR_TYPE::WHITE_SPACE_CHAR&&c!=CHAR_TYPE::NEWLINE&&m_Char!='/')
+                    if(c!=CHAR_TYPE::WHITE_SPACE_CHAR&&c!=CHAR_TYPE::NEWLINE&&m_Char!='/'&&c!=CHAR_TYPE::SINGLE_SIGN)
                         m_Text+=m_Char;
                     if      (c==CHAR_TYPE::NEWLINE||c==CHAR_TYPE::WHITE_SPACE_CHAR)                                      {OutputInfo();m_State=STATE::STATE_BEGIN;}
                     else if (m_Char == '/')                                                                              {OutputInfo();m_State=STATE::STATE_TO_COMMENT;}
+                    else if (c==CHAR_TYPE::SINGLE_SIGN)                                                                  {OutputInfo();m_State=STATE::STATE_BEGIN;}
+                    else if (m_Char=='|')                                                                                {m_Text.pop_back();OutputInfo();m_Text="|";m_State=STATE::STATE_WAIT_OR;}
+                    else if (m_Char=='&')                                                                                {m_Text.pop_back();OutputInfo();m_Text="&";m_State=STATE::STATE_WAIT_AND;}
+                    else if (m_Char=='<'||m_Char=='>'||m_Char=='!'||m_Char=='=')                                         {m_Text.pop_back();OutputInfo();m_Text="";m_Text+=m_Char;m_State=STATE::STATE_WAIT_EQUAL;}
                     else if (m_Char<='7'&&m_Char>='0')                                                                   {m_State=STATE::STATE_INT_HEX;}
                     else                                                                                                 {reportError();}
                     break;
                 }
                 case STATE::STATE_INT_DEC:
                 {
-                    if(c!=CHAR_TYPE::WHITE_SPACE_CHAR&&c!=CHAR_TYPE::NEWLINE&&m_Char!='/')
+                    if(c!=CHAR_TYPE::WHITE_SPACE_CHAR&&c!=CHAR_TYPE::NEWLINE&&m_Char!='/'&&c!=CHAR_TYPE::SINGLE_SIGN)
                         m_Text+=m_Char;
                     if      (c==CHAR_TYPE::NEWLINE||c==CHAR_TYPE::WHITE_SPACE_CHAR)                                      {OutputInfo();m_State=STATE::STATE_BEGIN;}
                     else if (m_Char == '/')                                                                              {OutputInfo();m_State=STATE::STATE_TO_COMMENT;}
+                    else if (c==CHAR_TYPE::SINGLE_SIGN)                                                                  {OutputInfo();m_State=STATE::STATE_BEGIN;}
+                    else if (m_Char=='|')                                                                                {m_Text.pop_back();OutputInfo();m_Text="|";m_State=STATE::STATE_WAIT_OR;}
+                    else if (m_Char=='&')                                                                                {m_Text.pop_back();OutputInfo();m_Text="&";m_State=STATE::STATE_WAIT_AND;}
+                    else if (m_Char=='<'||m_Char=='>'||m_Char=='!'||m_Char=='=')                                         {m_Text.pop_back();OutputInfo();m_Text="";m_Text+=m_Char;m_State=STATE::STATE_WAIT_EQUAL;}
                     else if (c==CHAR_TYPE::DIGIT)                                                                        {m_State=STATE::STATE_INT_DEC;}
                     else if (c==CHAR_TYPE::DOT)                                                                          {m_State=STATE::STATE_DEC_DOT;}
                     else if (m_Char=='e'||m_Char=='E')                                                                   {m_State=STATE::STATE_DEC_FLOAT_PRE;}
@@ -187,10 +216,14 @@ namespace Scanner
                 }
                 case STATE::STATE_DEC_DOT:
                 {
-                    if(c!=CHAR_TYPE::WHITE_SPACE_CHAR&&c!=CHAR_TYPE::NEWLINE&&m_Char!='/')
+                    if(c!=CHAR_TYPE::WHITE_SPACE_CHAR&&c!=CHAR_TYPE::NEWLINE&&m_Char!='/'&&c!=CHAR_TYPE::SINGLE_SIGN)
                         m_Text+=m_Char;
                     if      (c==CHAR_TYPE::NEWLINE||c==CHAR_TYPE::WHITE_SPACE_CHAR)                                      {OutputInfo();m_State=STATE::STATE_BEGIN;}
                     else if (m_Char == '/')                                                                              {OutputInfo();m_State=STATE::STATE_TO_COMMENT;}
+                    else if (c==CHAR_TYPE::SINGLE_SIGN)                                                                  {OutputInfo();m_State=STATE::STATE_BEGIN;}
+                    else if (m_Char=='|')                                                                                {m_Text.pop_back();OutputInfo();m_Text="|";m_State=STATE::STATE_WAIT_OR;}
+                    else if (m_Char=='&')                                                                                {m_Text.pop_back();OutputInfo();m_Text="&";m_State=STATE::STATE_WAIT_AND;}
+                    else if (m_Char=='<'||m_Char=='>'||m_Char=='!'||m_Char=='=')                                         {m_Text.pop_back();OutputInfo();m_Text="";m_Text+=m_Char;m_State=STATE::STATE_WAIT_EQUAL;}
                     else if (c==CHAR_TYPE::DIGIT)                                                                        {m_State=STATE::STATE_DEC_FLOAT;}
                     else if (m_Char=='e'||m_Char=='E')                                                                   {m_State=STATE::STATE_DEC_FLOAT_PRE;}
                     else                                                                                                 {reportError();}
@@ -198,10 +231,14 @@ namespace Scanner
                 }
                 case STATE::STATE_DEC_FLOAT:
                 {
-                    if(c!=CHAR_TYPE::WHITE_SPACE_CHAR&&c!=CHAR_TYPE::NEWLINE&&m_Char!='/')
+                    if(c!=CHAR_TYPE::WHITE_SPACE_CHAR&&c!=CHAR_TYPE::NEWLINE&&m_Char!='/'&&c!=CHAR_TYPE::SINGLE_SIGN)
                         m_Text+=m_Char;
                     if      (c==CHAR_TYPE::NEWLINE||c==CHAR_TYPE::WHITE_SPACE_CHAR)                                      {OutputInfo();m_State=STATE::STATE_BEGIN;}
                     else if (m_Char == '/')                                                                              {OutputInfo();m_State=STATE::STATE_TO_COMMENT;}
+                    else if (c==CHAR_TYPE::SINGLE_SIGN)                                                                  {OutputInfo();m_State=STATE::STATE_BEGIN;}
+                    else if (m_Char=='|')                                                                                {m_Text.pop_back();OutputInfo();m_Text="|";m_State=STATE::STATE_WAIT_OR;}
+                    else if (m_Char=='&')                                                                                {m_Text.pop_back();OutputInfo();m_Text="&";m_State=STATE::STATE_WAIT_AND;}
+                    else if (m_Char=='<'||m_Char=='>'||m_Char=='!'||m_Char=='=')                                         {m_Text.pop_back();OutputInfo();m_Text="";m_Text+=m_Char;m_State=STATE::STATE_WAIT_EQUAL;}
                     else if (c==CHAR_TYPE::DIGIT)                                                                        {m_State=STATE::STATE_DEC_FLOAT;}
                     else if (m_Char=='e'||m_Char=='E')                                                                   {m_State=STATE::STATE_DEC_FLOAT_PRE;}
                     else                                                                                                 {reportError();}
@@ -226,10 +263,14 @@ namespace Scanner
                 }
                 case STATE::STATE_IDENT:
                 {
-                    if(c!=CHAR_TYPE::WHITE_SPACE_CHAR&&c!=CHAR_TYPE::NEWLINE&&m_Char!='/')
+                    if(c!=CHAR_TYPE::WHITE_SPACE_CHAR&&c!=CHAR_TYPE::NEWLINE&&m_Char!='/'&&c!=CHAR_TYPE::SINGLE_SIGN)
                     m_Text+=m_Char;
                     if      (c==CHAR_TYPE::NEWLINE||c==CHAR_TYPE::WHITE_SPACE_CHAR)                                      {OutputInfo();m_State=STATE::STATE_BEGIN;}
                     else if (m_Char == '/')                                                                              {OutputInfo();m_State=STATE::STATE_TO_COMMENT;}
+                    else if (c==CHAR_TYPE::SINGLE_SIGN)                                                                  {OutputInfo();m_State=STATE::STATE_BEGIN;}
+                    else if (m_Char=='|')                                                                                {m_Text.pop_back();OutputInfo();m_Text="|";m_State=STATE::STATE_WAIT_OR;}
+                    else if (m_Char=='&')                                                                                {m_Text.pop_back();OutputInfo();m_Text="&";m_State=STATE::STATE_WAIT_AND;}
+                    else if (m_Char=='<'||m_Char=='>'||m_Char=='!'||m_Char=='=')                                         {m_Text.pop_back();OutputInfo();m_Text="";m_Text+=m_Char;m_State=STATE::STATE_WAIT_EQUAL;}
                     else if (c==CHAR_TYPE::ALPHA||c==CHAR_TYPE::UNDERSCORE||c==CHAR_TYPE::DIGIT)                         {m_State=STATE::STATE_IDENT;}
                     else                                                                                                 {reportError();}
                     break;
@@ -241,6 +282,10 @@ namespace Scanner
                         m_Text+=m_Char;
                     if      (m_Char=='/')                                                                                {m_State=STATE::STATE_COMMENT_LINE;}
                     else if (m_Char=='*')                                                                                {m_State=STATE::STATE_COMMENT_PARAGRAPH;}
+                    else if (c==CHAR_TYPE::SINGLE_SIGN)                                                                  {char temp = m_Char;m_Char='/';OutputInfo();m_State=STATE::STATE_BEGIN;m_Char=temp;OutputInfo();}
+                    else if (m_Char=='<'||m_Char=='>'||m_Char=='!'||m_Char=='=')                                         {char temp = m_Char;m_Char='/';OutputInfo();m_Text="";m_Text+=temp;m_State=STATE::STATE_WAIT_EQUAL;}
+                    else if (m_Char=='|')                                                                                {m_Char='/';OutputInfo();m_Text="|";m_State=STATE::STATE_WAIT_OR;}
+                    else if (m_Char=='&')                                                                                {m_Char='/';OutputInfo();m_Text="&";m_State=STATE::STATE_WAIT_AND;}
                     else if (c==CHAR_TYPE::NEWLINE||c==CHAR_TYPE::WHITE_SPACE_CHAR)                                      {m_Char='/';OutputInfo();m_State=STATE::STATE_BEGIN;}
                     else if (c==CHAR_TYPE::DIGIT&&m_Char!='0')                                                           {m_Char='/';OutputInfo();m_State=STATE::STATE_INT_DEC;}
                     else if (m_Char=='0')                                                                                {m_Char='/';OutputInfo();m_State=STATE::STATE_PREFIX_ZERO;}
@@ -264,6 +309,39 @@ namespace Scanner
                 {
                     if(m_Char=='/')                                                                                      {m_State=STATE::STATE_BEGIN;}
                     else                                                                                                 {m_State=STATE::STATE_COMMENT_PARAGRAPH;}
+                    break;
+                }
+                case STATE::STATE_WAIT_EQUAL:
+                {
+                    if(c!=CHAR_TYPE::NEWLINE&&c!=CHAR_TYPE::WHITE_SPACE_CHAR&&m_Char!='/'&&m_Char!='*')
+                        m_Text+=m_Char;
+                    if      (m_Char=='=')                                                                                {OutputInfo();m_State=STATE::STATE_BEGIN;}
+                    else if (c==CHAR_TYPE::NEWLINE||c==CHAR_TYPE::WHITE_SPACE_CHAR)                                      {m_Char=m_Text[0];OutputInfo();m_State=STATE::STATE_BEGIN;}
+                    else if (c==CHAR_TYPE::SINGLE_SIGN)                                                                  {m_Char=m_Text[0];OutputInfo();m_State=STATE::STATE_BEGIN;}
+                    else if (c==CHAR_TYPE::ALPHA||c==CHAR_TYPE::UNDERSCORE)                                              {m_Char=m_Text[0];m_Text=m_Text.substr(1,m_Text.size()-1);OutputInfo();m_State=STATE::STATE_IDENT;}
+                    else if (c==CHAR_TYPE::DIGIT&&m_Char!='0')                                                           {m_Char=m_Text[0];m_Text=m_Text.substr(1,m_Text.size()-1);OutputInfo();m_State=STATE::STATE_INT_DEC;}
+                    else if (m_Char=='0')                                                                                {m_Char=m_Text[0];m_Text=m_Text.substr(1,m_Text.size()-1);OutputInfo();m_State=STATE::STATE_PREFIX_ZERO;}
+                    else if (c==CHAR_TYPE::DOT)                                                                          {m_Char=m_Text[0];m_Text=m_Text.substr(1,m_Text.size()-1);OutputInfo();m_State=STATE::STATE_DEC_DOT_BEGIN;}
+                    else if (m_Char=='/')                                                                                {m_Char=m_Text[0];m_Text="";OutputInfo();m_State=STATE::STATE_TO_COMMENT;}
+                    else if (m_Char=='|')                                                                                {m_Text.pop_back();m_Char=m_Text[0];OutputInfo();m_Text="|";m_State=STATE::STATE_WAIT_OR;}
+                    else if (m_Char=='&')                                                                                {m_Text.pop_back();m_Char=m_Text[0];OutputInfo();m_Text="&";m_State=STATE::STATE_WAIT_AND;}
+                    else                                                                                                 {reportError();}
+                    break;
+                }
+                case STATE::STATE_WAIT_AND:
+                {
+                    if(c!=CHAR_TYPE::NEWLINE&&c!=CHAR_TYPE::WHITE_SPACE_CHAR&&m_Char!='/'&&m_Char!='*')
+                        m_Text+=m_Char;
+                    if      (m_Char=='&')                                                                                {OutputInfo();m_State=STATE::STATE_BEGIN;}
+                    else                                                                                                 {reportError();}
+                    break;
+                }
+                case STATE::STATE_WAIT_OR:
+                {
+                    if(c!=CHAR_TYPE::NEWLINE&&c!=CHAR_TYPE::WHITE_SPACE_CHAR&&m_Char!='/'&&m_Char!='*')
+                        m_Text+=m_Char;
+                    if      (m_Char=='|')                                                                                {OutputInfo();m_State=STATE::STATE_BEGIN;}
+                    else                                                                                                 {reportError();}
                     break;
                 }
                 case STATE::STATE_EMPTY:
@@ -294,8 +372,40 @@ namespace Scanner
                 m_State == STATE::STATE_HEX_FLOAT_READY) {
             reportResult(3);
         }
+        else if(m_State==STATE::STATE_WAIT_EQUAL||m_State==STATE::STATE_WAIT_OR||m_State==STATE::STATE_WAIT_AND)
+        {
+            if(m_Text.size()==2)
+            {
+                reportResult(4);
+            }
+            else
+            {
+                std::string temp="";
+                temp+=m_Char;
+                reportResult(4,temp);
+            }
+        }
         else if(m_Char=='/'){
             reportResult(4,"/");
+        }
+
+        if(m_Char=='+'||m_Char=='-'||m_Char=='*')
+        {
+            std::string temp="";
+            temp+=m_Char;
+            reportResult(4,temp);
+        }
+        if(m_Char=='{'||m_Char=='}'||m_Char=='['||m_Char==']'||m_Char=='('||m_Char==')')
+        {
+            std::string temp="";
+            temp+=m_Char;
+            reportResult(5,temp);
+        }
+        if(m_Char==','||m_Char==';')
+        {
+            std::string temp="";
+            temp+=m_Char;
+            reportResult(6,temp);
         }
     }
 
