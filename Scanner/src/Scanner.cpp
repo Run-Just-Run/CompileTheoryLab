@@ -76,7 +76,7 @@ namespace Scanner
                 case STATE::STATE_BEGIN:
                 {
                     m_Text="";
-                    if      (c==CHAR_TYPE::NEWLINE||c==CHAR_TYPE::WHITE_SPACE_CHAR)                                      {if(m_Text!="")OutputInfo();m_State=STATE::STATE_BEGIN;}
+                    if      (c==CHAR_TYPE::NEWLINE||c==CHAR_TYPE::WHITE_SPACE_CHAR)                                      {m_State=STATE::STATE_BEGIN;}
                     else if (c==CHAR_TYPE::SINGLE_SIGN)                                                                  {OutputInfo();m_State=STATE::STATE_BEGIN;}
                     else if (m_Char=='|')                                                                                {m_Text+=m_Char;m_State=STATE::STATE_WAIT_OR;}
                     else if (m_Char=='&')                                                                                {m_Text+=m_Char;m_State=STATE::STATE_WAIT_AND;}
