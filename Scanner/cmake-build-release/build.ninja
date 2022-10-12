@@ -39,13 +39,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/HP/CLionProjects/Scanner/cmake-build-release/
+cmake_ninja_workdir = C$:/Users/HP/Desktop/Scanner/cmake-build-release/
 
 #############################################
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\HP\CLionProjects\Scanner\cmake-build-release && "D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\HP\CLionProjects\Scanner -BC:\Users\HP\CLionProjects\Scanner\cmake-build-release"
+  COMMAND = cmd.exe /C "cd /D C:\Users\HP\Desktop\Scanner\cmake-build-release && "D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\HP\Desktop\Scanner -BC:\Users\HP\Desktop\Scanner\cmake-build-release"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -61,29 +61,35 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_Scanner: phony || cmake_object_order_depends_target_spdlog
 
-build CMakeFiles/Scanner.dir/src/main.cpp.obj: CXX_COMPILER__Scanner_Release C$:/Users/HP/CLionProjects/Scanner/src/main.cpp || cmake_object_order_depends_target_Scanner
+build CMakeFiles/Scanner.dir/src/main.cpp.obj: CXX_COMPILER__Scanner_Release C$:/Users/HP/Desktop/Scanner/src/main.cpp || cmake_object_order_depends_target_Scanner
   DEFINES = -DSPDLOG_COMPILED_LIB
   DEP_FILE = CMakeFiles\Scanner.dir\src\main.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17
-  INCLUDES = -IC:/Users/HP/CLionProjects/Scanner/vendor/spdlog-1.x/include
+  INCLUDES = -IC:/Users/HP/Desktop/Scanner/vendor/spdlog-1.x/include
   OBJECT_DIR = CMakeFiles\Scanner.dir
   OBJECT_FILE_DIR = CMakeFiles\Scanner.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\Scanner.dir\
+  TARGET_PDB = Scanner.pdb
 
-build CMakeFiles/Scanner.dir/src/Scanner.cpp.obj: CXX_COMPILER__Scanner_Release C$:/Users/HP/CLionProjects/Scanner/src/Scanner.cpp || cmake_object_order_depends_target_Scanner
+build CMakeFiles/Scanner.dir/src/Scanner.cpp.obj: CXX_COMPILER__Scanner_Release C$:/Users/HP/Desktop/Scanner/src/Scanner.cpp || cmake_object_order_depends_target_Scanner
   DEFINES = -DSPDLOG_COMPILED_LIB
   DEP_FILE = CMakeFiles\Scanner.dir\src\Scanner.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17
-  INCLUDES = -IC:/Users/HP/CLionProjects/Scanner/vendor/spdlog-1.x/include
+  INCLUDES = -IC:/Users/HP/Desktop/Scanner/vendor/spdlog-1.x/include
   OBJECT_DIR = CMakeFiles\Scanner.dir
   OBJECT_FILE_DIR = CMakeFiles\Scanner.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\Scanner.dir\
+  TARGET_PDB = Scanner.pdb
 
-build CMakeFiles/Scanner.dir/src/Log.cpp.obj: CXX_COMPILER__Scanner_Release C$:/Users/HP/CLionProjects/Scanner/src/Log.cpp || cmake_object_order_depends_target_Scanner
+build CMakeFiles/Scanner.dir/src/Log.cpp.obj: CXX_COMPILER__Scanner_Release C$:/Users/HP/Desktop/Scanner/src/Log.cpp || cmake_object_order_depends_target_Scanner
   DEFINES = -DSPDLOG_COMPILED_LIB
   DEP_FILE = CMakeFiles\Scanner.dir\src\Log.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17
-  INCLUDES = -IC:/Users/HP/CLionProjects/Scanner/vendor/spdlog-1.x/include
+  INCLUDES = -IC:/Users/HP/Desktop/Scanner/vendor/spdlog-1.x/include
   OBJECT_DIR = CMakeFiles\Scanner.dir
   OBJECT_FILE_DIR = CMakeFiles\Scanner.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\Scanner.dir\
+  TARGET_PDB = Scanner.pdb
 
 
 # =============================================================================
@@ -100,16 +106,17 @@ build Scanner.exe: CXX_EXECUTABLE_LINKER__Scanner_Release CMakeFiles/Scanner.dir
   OBJECT_DIR = CMakeFiles\Scanner.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\Scanner.dir\
   TARGET_FILE = Scanner.exe
   TARGET_IMPLIB = libScanner.dll.a
-  TARGET_PDB = Scanner.exe.dbg
+  TARGET_PDB = Scanner.pdb
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\HP\CLionProjects\Scanner\cmake-build-release && "D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\Users\HP\Desktop\Scanner\cmake-build-release && "D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -117,7 +124,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/HP/CLionProjects/Scanner/CMakeLists.txt
+# C:/Users/HP/Desktop/Scanner/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -129,61 +136,75 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_spdlog: phony || vendor/spdlog-1.x/CMakeFiles/spdlog.dir
 
-build vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/spdlog.cpp.obj: CXX_COMPILER__spdlog_Release C$:/Users/HP/CLionProjects/Scanner/vendor/spdlog-1.x/src/spdlog.cpp || cmake_object_order_depends_target_spdlog
+build vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/spdlog.cpp.obj: CXX_COMPILER__spdlog_Release C$:/Users/HP/Desktop/Scanner/vendor/spdlog-1.x/src/spdlog.cpp || cmake_object_order_depends_target_spdlog
   DEFINES = -DSPDLOG_COMPILED_LIB
   DEP_FILE = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\src\spdlog.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -std=c++17
-  INCLUDES = -IC:/Users/HP/CLionProjects/Scanner/vendor/spdlog-1.x/include
+  INCLUDES = -IC:/Users/HP/Desktop/Scanner/vendor/spdlog-1.x/include
   OBJECT_DIR = vendor\spdlog-1.x\CMakeFiles\spdlog.dir
   OBJECT_FILE_DIR = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\src
+  TARGET_COMPILE_PDB = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\spdlog.pdb
+  TARGET_PDB = vendor\spdlog-1.x\libspdlog.pdb
 
-build vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.obj: CXX_COMPILER__spdlog_Release C$:/Users/HP/CLionProjects/Scanner/vendor/spdlog-1.x/src/stdout_sinks.cpp || cmake_object_order_depends_target_spdlog
+build vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.obj: CXX_COMPILER__spdlog_Release C$:/Users/HP/Desktop/Scanner/vendor/spdlog-1.x/src/stdout_sinks.cpp || cmake_object_order_depends_target_spdlog
   DEFINES = -DSPDLOG_COMPILED_LIB
   DEP_FILE = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\src\stdout_sinks.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -std=c++17
-  INCLUDES = -IC:/Users/HP/CLionProjects/Scanner/vendor/spdlog-1.x/include
+  INCLUDES = -IC:/Users/HP/Desktop/Scanner/vendor/spdlog-1.x/include
   OBJECT_DIR = vendor\spdlog-1.x\CMakeFiles\spdlog.dir
   OBJECT_FILE_DIR = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\src
+  TARGET_COMPILE_PDB = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\spdlog.pdb
+  TARGET_PDB = vendor\spdlog-1.x\libspdlog.pdb
 
-build vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/color_sinks.cpp.obj: CXX_COMPILER__spdlog_Release C$:/Users/HP/CLionProjects/Scanner/vendor/spdlog-1.x/src/color_sinks.cpp || cmake_object_order_depends_target_spdlog
+build vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/color_sinks.cpp.obj: CXX_COMPILER__spdlog_Release C$:/Users/HP/Desktop/Scanner/vendor/spdlog-1.x/src/color_sinks.cpp || cmake_object_order_depends_target_spdlog
   DEFINES = -DSPDLOG_COMPILED_LIB
   DEP_FILE = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\src\color_sinks.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -std=c++17
-  INCLUDES = -IC:/Users/HP/CLionProjects/Scanner/vendor/spdlog-1.x/include
+  INCLUDES = -IC:/Users/HP/Desktop/Scanner/vendor/spdlog-1.x/include
   OBJECT_DIR = vendor\spdlog-1.x\CMakeFiles\spdlog.dir
   OBJECT_FILE_DIR = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\src
+  TARGET_COMPILE_PDB = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\spdlog.pdb
+  TARGET_PDB = vendor\spdlog-1.x\libspdlog.pdb
 
-build vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/file_sinks.cpp.obj: CXX_COMPILER__spdlog_Release C$:/Users/HP/CLionProjects/Scanner/vendor/spdlog-1.x/src/file_sinks.cpp || cmake_object_order_depends_target_spdlog
+build vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/file_sinks.cpp.obj: CXX_COMPILER__spdlog_Release C$:/Users/HP/Desktop/Scanner/vendor/spdlog-1.x/src/file_sinks.cpp || cmake_object_order_depends_target_spdlog
   DEFINES = -DSPDLOG_COMPILED_LIB
   DEP_FILE = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\src\file_sinks.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -std=c++17
-  INCLUDES = -IC:/Users/HP/CLionProjects/Scanner/vendor/spdlog-1.x/include
+  INCLUDES = -IC:/Users/HP/Desktop/Scanner/vendor/spdlog-1.x/include
   OBJECT_DIR = vendor\spdlog-1.x\CMakeFiles\spdlog.dir
   OBJECT_FILE_DIR = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\src
+  TARGET_COMPILE_PDB = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\spdlog.pdb
+  TARGET_PDB = vendor\spdlog-1.x\libspdlog.pdb
 
-build vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/async.cpp.obj: CXX_COMPILER__spdlog_Release C$:/Users/HP/CLionProjects/Scanner/vendor/spdlog-1.x/src/async.cpp || cmake_object_order_depends_target_spdlog
+build vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/async.cpp.obj: CXX_COMPILER__spdlog_Release C$:/Users/HP/Desktop/Scanner/vendor/spdlog-1.x/src/async.cpp || cmake_object_order_depends_target_spdlog
   DEFINES = -DSPDLOG_COMPILED_LIB
   DEP_FILE = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\src\async.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -std=c++17
-  INCLUDES = -IC:/Users/HP/CLionProjects/Scanner/vendor/spdlog-1.x/include
+  INCLUDES = -IC:/Users/HP/Desktop/Scanner/vendor/spdlog-1.x/include
   OBJECT_DIR = vendor\spdlog-1.x\CMakeFiles\spdlog.dir
   OBJECT_FILE_DIR = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\src
+  TARGET_COMPILE_PDB = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\spdlog.pdb
+  TARGET_PDB = vendor\spdlog-1.x\libspdlog.pdb
 
-build vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/cfg.cpp.obj: CXX_COMPILER__spdlog_Release C$:/Users/HP/CLionProjects/Scanner/vendor/spdlog-1.x/src/cfg.cpp || cmake_object_order_depends_target_spdlog
+build vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/cfg.cpp.obj: CXX_COMPILER__spdlog_Release C$:/Users/HP/Desktop/Scanner/vendor/spdlog-1.x/src/cfg.cpp || cmake_object_order_depends_target_spdlog
   DEFINES = -DSPDLOG_COMPILED_LIB
   DEP_FILE = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\src\cfg.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -std=c++17
-  INCLUDES = -IC:/Users/HP/CLionProjects/Scanner/vendor/spdlog-1.x/include
+  INCLUDES = -IC:/Users/HP/Desktop/Scanner/vendor/spdlog-1.x/include
   OBJECT_DIR = vendor\spdlog-1.x\CMakeFiles\spdlog.dir
   OBJECT_FILE_DIR = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\src
+  TARGET_COMPILE_PDB = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\spdlog.pdb
+  TARGET_PDB = vendor\spdlog-1.x\libspdlog.pdb
 
-build vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/fmt.cpp.obj: CXX_COMPILER__spdlog_Release C$:/Users/HP/CLionProjects/Scanner/vendor/spdlog-1.x/src/fmt.cpp || cmake_object_order_depends_target_spdlog
+build vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/fmt.cpp.obj: CXX_COMPILER__spdlog_Release C$:/Users/HP/Desktop/Scanner/vendor/spdlog-1.x/src/fmt.cpp || cmake_object_order_depends_target_spdlog
   DEFINES = -DSPDLOG_COMPILED_LIB
   DEP_FILE = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\src\fmt.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -std=c++17
-  INCLUDES = -IC:/Users/HP/CLionProjects/Scanner/vendor/spdlog-1.x/include
+  INCLUDES = -IC:/Users/HP/Desktop/Scanner/vendor/spdlog-1.x/include
   OBJECT_DIR = vendor\spdlog-1.x\CMakeFiles\spdlog.dir
   OBJECT_FILE_DIR = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\src
+  TARGET_COMPILE_PDB = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\spdlog.pdb
+  TARGET_PDB = vendor\spdlog-1.x\libspdlog.pdb
 
 
 # =============================================================================
@@ -198,15 +219,16 @@ build vendor/spdlog-1.x/libspdlog.a: CXX_STATIC_LIBRARY_LINKER__spdlog_Release v
   OBJECT_DIR = vendor\spdlog-1.x\CMakeFiles\spdlog.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
+  TARGET_COMPILE_PDB = vendor\spdlog-1.x\CMakeFiles\spdlog.dir\spdlog.pdb
   TARGET_FILE = vendor\spdlog-1.x\libspdlog.a
-  TARGET_PDB = spdlog.a.dbg
+  TARGET_PDB = vendor\spdlog-1.x\libspdlog.pdb
 
 
 #############################################
 # Utility command for edit_cache
 
 build vendor/spdlog-1.x/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\HP\CLionProjects\Scanner\cmake-build-release\vendor\spdlog-1.x && "D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\Users\HP\Desktop\Scanner\cmake-build-release\vendor\spdlog-1.x && "D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -217,7 +239,7 @@ build vendor/spdlog-1.x/edit_cache: phony vendor/spdlog-1.x/CMakeFiles/edit_cach
 # Utility command for rebuild_cache
 
 build vendor/spdlog-1.x/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\HP\CLionProjects\Scanner\cmake-build-release\vendor\spdlog-1.x && "D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\HP\CLionProjects\Scanner -BC:\Users\HP\CLionProjects\Scanner\cmake-build-release"
+  COMMAND = cmd.exe /C "cd /D C:\Users\HP\Desktop\Scanner\cmake-build-release\vendor\spdlog-1.x && "D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\HP\Desktop\Scanner -BC:\Users\HP\Desktop\Scanner\cmake-build-release"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -239,14 +261,14 @@ build spdlog: phony vendor/spdlog-1.x/libspdlog.a
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/HP/CLionProjects/Scanner/cmake-build-release
+# Folder: C:/Users/HP/Desktop/Scanner/cmake-build-release
 
 build all: phony Scanner.exe vendor/spdlog-1.x/all
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/HP/CLionProjects/Scanner/cmake-build-release/vendor/spdlog-1.x
+# Folder: C:/Users/HP/Desktop/Scanner/cmake-build-release/vendor/spdlog-1.x
 
 build vendor/spdlog-1.x/all: phony vendor/spdlog-1.x/libspdlog.a
 
@@ -257,14 +279,14 @@ build vendor/spdlog-1.x/all: phony vendor/spdlog-1.x/libspdlog.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../vendor/spdlog-1.x/CMakeLists.txt ../vendor/spdlog-1.x/cmake/ide.cmake ../vendor/spdlog-1.x/cmake/utils.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeRCCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCInformation.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCXXInformation.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeGenericSystem.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeRCInformation.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CheckIncludeFile.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CheckLibraryExists.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-C.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/FindPackageMessage.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/FindThreads.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/GNUInstallDirs.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-CXX.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-windres.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/WindowsPaths.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../vendor/spdlog-1.x/CMakeLists.txt ../vendor/spdlog-1.x/cmake/ide.cmake ../vendor/spdlog-1.x/cmake/utils.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeRCCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCCompiler.cmake.in D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCCompilerABI.c D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCInformation.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCXXCompiler.cmake.in D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCXXInformation.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCompilerIdDetection.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeDetermineCCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeDetermineCXXCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeDetermineCompileFeatures.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeDetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeDetermineCompilerABI.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeDetermineCompilerId.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeDetermineRCCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeDetermineSystem.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeFindBinUtils.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeGenericSystem.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeParseImplicitIncludeInfo.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeParseImplicitLinkInfo.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeParseLibraryArchitecture.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeRCCompiler.cmake.in D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeRCInformation.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystem.cmake.in D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeTestCCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeTestCXXCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeTestCompilerCommon.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeTestRCCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CheckIncludeFile.c.in D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CheckIncludeFile.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CheckLibraryExists.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/ADSP-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/ARMCC-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/ARMClang-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/AppleClang-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Borland-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Bruce-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Clang-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Clang-DetermineCompilerInternal.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Compaq-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Cray-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Embarcadero-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Fujitsu-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GHS-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-C.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-FindBinUtils.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/HP-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/HP-CXX-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/IAR-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Intel-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/MSVC-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/NVHPC-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/NVIDIA-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/PGI-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/PathScale-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/ROCMClang-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/SCO-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/SDCC-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/SunPro-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/TI-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Watcom-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/XL-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/XL-CXX-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/XLClang-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/zOS-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/FindPackageMessage.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/FindThreads.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/GNUInstallDirs.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Internal/FeatureTesting.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-Determine-CXX.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-CXX.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-windres.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/WindowsPaths.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../vendor/spdlog-1.x/CMakeLists.txt ../vendor/spdlog-1.x/cmake/ide.cmake ../vendor/spdlog-1.x/cmake/utils.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeRCCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCInformation.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCXXInformation.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeGenericSystem.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeRCInformation.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CheckIncludeFile.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CheckLibraryExists.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-C.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/FindPackageMessage.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/FindThreads.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/GNUInstallDirs.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-CXX.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-windres.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/WindowsPaths.cmake: phony
+build ../CMakeLists.txt ../vendor/spdlog-1.x/CMakeLists.txt ../vendor/spdlog-1.x/cmake/ide.cmake ../vendor/spdlog-1.x/cmake/utils.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeRCCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCCompiler.cmake.in D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCCompilerABI.c D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCInformation.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCXXCompiler.cmake.in D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCXXInformation.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCompilerIdDetection.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeDetermineCCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeDetermineCXXCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeDetermineCompileFeatures.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeDetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeDetermineCompilerABI.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeDetermineCompilerId.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeDetermineRCCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeDetermineSystem.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeFindBinUtils.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeGenericSystem.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeParseImplicitIncludeInfo.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeParseImplicitLinkInfo.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeParseLibraryArchitecture.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeRCCompiler.cmake.in D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeRCInformation.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystem.cmake.in D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeTestCCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeTestCXXCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeTestCompilerCommon.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeTestRCCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CheckIncludeFile.c.in D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CheckIncludeFile.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CheckLibraryExists.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/ADSP-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/ARMCC-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/ARMClang-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/AppleClang-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Borland-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Bruce-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Clang-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Clang-DetermineCompilerInternal.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Compaq-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Cray-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Embarcadero-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Fujitsu-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GHS-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-C.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-FindBinUtils.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/HP-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/HP-CXX-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/IAR-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Intel-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/MSVC-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/NVHPC-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/NVIDIA-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/PGI-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/PathScale-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/ROCMClang-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/SCO-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/SDCC-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/SunPro-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/TI-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/Watcom-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/XL-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/XL-CXX-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/XLClang-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/zOS-C-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/FindPackageMessage.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/FindThreads.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/GNUInstallDirs.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Internal/FeatureTesting.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-Determine-CXX.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-CXX.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-windres.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows.cmake D$:/JETBRAIN/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/WindowsPaths.cmake: phony
 
 
 #############################################

@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
 
-The C compiler identification is GNU, found in "C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/3.21.1/CompilerIdC/a.exe"
+The C compiler identification is GNU, found in "C:/Users/HP/Desktop/Scanner/cmake-build-release/CMakeFiles/3.21.1/CompilerIdC/a.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/g++.exe 
@@ -23,15 +23,12 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
 
-The CXX compiler identification is GNU, found in "C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/3.21.1/CompilerIdCXX/a.exe"
+The CXX compiler identification is GNU, found in "C:/Users/HP/Desktop/Scanner/cmake-build-release/CMakeFiles/3.21.1/CompilerIdCXX/a.exe"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/HP/Desktop/Scanner/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command(s):D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_fe842/fast && D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\cmTC_fe842.dir\build.make CMakeFiles/cmTC_fe842.dir/build
-mingw32-make[1]: Entering directory 'C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_fe842.dir/CMakeCCompilerABI.c.obj
-"D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\gcc.exe"   -v -o CMakeFiles\cmTC_fe842.dir\CMakeCCompilerABI.c.obj -c "D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\share\cmake-3.21\Modules\CMakeCCompilerABI.c"
+Run Build Command(s):D:/JETBRAIN/CLion 2021.3.3/bin/ninja/win/ninja.exe cmTC_c1d92 && [1/2] Building C object CMakeFiles/cmTC_c1d92.dir/CMakeCCompilerABI.c.obj
 Using built-in specs.
 COLLECT_GCC=D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\gcc.exe
 Target: x86_64-w64-mingw32
@@ -39,8 +36,8 @@ Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_
 Thread model: posix
 Supported LTO compression algorithms: zlib
 gcc version 11.2.0 (GCC) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_fe842.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_fe842.dir\'
- D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\share\cmake-3.21\Modules\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\cmTC_fe842.dir\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\Users\HP\AppData\Local\Temp\ccVGZy8Q.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c1d92.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c1d92.dir/'
+ D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:/JETBRAIN/CLion 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_c1d92.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\Users\HP\AppData\Local\Temp\ccneJ5lk.s
 GNU C17 (GCC) version 11.2.0 (x86_64-w64-mingw32)
 	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -61,17 +58,13 @@ GNU C17 (GCC) version 11.2.0 (x86_64-w64-mingw32)
 	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 23424b72d090e8b977a96775bde79257
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_fe842.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_fe842.dir\'
- as -v -o CMakeFiles\cmTC_fe842.dir\CMakeCCompilerABI.c.obj C:\Users\HP\AppData\Local\Temp\ccVGZy8Q.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c1d92.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c1d92.dir/'
+ as -v -o CMakeFiles/cmTC_c1d92.dir/CMakeCCompilerABI.c.obj C:\Users\HP\AppData\Local\Temp\ccneJ5lk.s
 GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37
 COMPILER_PATH=D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/
 LIBRARY_PATH=D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_fe842.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_fe842.dir\CMakeCCompilerABI.c.'
-Linking C executable cmTC_fe842.exe
-"D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_fe842.dir\link.txt --verbose=1
-"D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_fe842.dir/objects.a
-"D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\ar.exe" qc CMakeFiles\cmTC_fe842.dir/objects.a @CMakeFiles\cmTC_fe842.dir\objects1.rsp
-"D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\gcc.exe"  -v -Wl,--whole-archive CMakeFiles\cmTC_fe842.dir/objects.a -Wl,--no-whole-archive -o cmTC_fe842.exe -Wl,--out-implib,libcmTC_fe842.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c1d92.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c1d92.dir/CMakeCCompilerABI.c.'
+[2/2] Linking C executable cmTC_c1d92.exe
 Using built-in specs.
 COLLECT_GCC=D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\gcc.exe
 COLLECT_LTO_WRAPPER=D:/JETBRAIN/CLion\ 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe
@@ -82,10 +75,9 @@ Supported LTO compression algorithms: zlib
 gcc version 11.2.0 (GCC) 
 COMPILER_PATH=D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/
 LIBRARY_PATH=D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fe842.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_fe842.'
- D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_fe842.exe D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. --whole-archive CMakeFiles\cmTC_fe842.dir/objects.a --no-whole-archive --out-implib libcmTC_fe842.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fe842.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_fe842.'
-mingw32-make[1]: Leaving directory 'C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c1d92.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_c1d92.'
+ D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_c1d92.exe D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. CMakeFiles/cmTC_c1d92.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_c1d92.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c1d92.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_c1d92.'
 
 
 
@@ -106,12 +98,9 @@ Parsed C implicit include dir info from above output: rv=done
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: C:/Users/HP/Desktop/Scanner/cmake-build-release/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_fe842/fast && D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\cmTC_fe842.dir\build.make CMakeFiles/cmTC_fe842.dir/build]
-  ignore line: [mingw32-make[1]: Entering directory 'C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_fe842.dir/CMakeCCompilerABI.c.obj]
-  ignore line: ["D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\gcc.exe"   -v -o CMakeFiles\cmTC_fe842.dir\CMakeCCompilerABI.c.obj -c "D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\share\cmake-3.21\Modules\CMakeCCompilerABI.c"]
+  ignore line: [Run Build Command(s):D:/JETBRAIN/CLion 2021.3.3/bin/ninja/win/ninja.exe cmTC_c1d92 && [1/2] Building C object CMakeFiles/cmTC_c1d92.dir/CMakeCCompilerABI.c.obj]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\gcc.exe]
   ignore line: [Target: x86_64-w64-mingw32]
@@ -119,8 +108,8 @@ Parsed C implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib]
   ignore line: [gcc version 11.2.0 (GCC) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_fe842.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_fe842.dir\']
-  ignore line: [ D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\share\cmake-3.21\Modules\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\cmTC_fe842.dir\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\Users\HP\AppData\Local\Temp\ccVGZy8Q.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c1d92.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c1d92.dir/']
+  ignore line: [ D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:/JETBRAIN/CLion 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_c1d92.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\Users\HP\AppData\Local\Temp\ccneJ5lk.s]
   ignore line: [GNU C17 (GCC) version 11.2.0 (x86_64-w64-mingw32)]
   ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -141,8 +130,8 @@ Parsed C implicit link information from above output:
   ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 23424b72d090e8b977a96775bde79257]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_fe842.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_fe842.dir\']
-  ignore line: [ as -v -o CMakeFiles\cmTC_fe842.dir\CMakeCCompilerABI.c.obj C:\Users\HP\AppData\Local\Temp\ccVGZy8Q.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c1d92.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c1d92.dir/']
+  ignore line: [ as -v -o CMakeFiles/cmTC_c1d92.dir/CMakeCCompilerABI.c.obj C:\Users\HP\AppData\Local\Temp\ccneJ5lk.s]
   ignore line: [GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37]
   ignore line: [COMPILER_PATH=D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/]
   ignore line: [D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/]
@@ -152,12 +141,8 @@ Parsed C implicit link information from above output:
   ignore line: [D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
   ignore line: [D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
   ignore line: [D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_fe842.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_fe842.dir\CMakeCCompilerABI.c.']
-  ignore line: [Linking C executable cmTC_fe842.exe]
-  ignore line: ["D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_fe842.dir\link.txt --verbose=1]
-  ignore line: ["D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_fe842.dir/objects.a]
-  ignore line: ["D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\ar.exe" qc CMakeFiles\cmTC_fe842.dir/objects.a @CMakeFiles\cmTC_fe842.dir\objects1.rsp]
-  ignore line: ["D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\gcc.exe"  -v -Wl --whole-archive CMakeFiles\cmTC_fe842.dir/objects.a -Wl --no-whole-archive -o cmTC_fe842.exe -Wl --out-implib libcmTC_fe842.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c1d92.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c1d92.dir/CMakeCCompilerABI.c.']
+  ignore line: [[2/2] Linking C executable cmTC_c1d92.exe]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\gcc.exe]
   ignore line: [COLLECT_LTO_WRAPPER=D:/JETBRAIN/CLion\ 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe]
@@ -174,10 +159,9 @@ Parsed C implicit link information from above output:
   ignore line: [D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
   ignore line: [D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
   ignore line: [D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fe842.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_fe842.']
-  ignore line: [ D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_fe842.exe D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. --whole-archive CMakeFiles\cmTC_fe842.dir/objects.a --no-whole-archive --out-implib libcmTC_fe842.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fe842.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_fe842.']
-  ignore line: [mingw32-make[1]: Leaving directory 'C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/CMakeTmp']
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c1d92.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_c1d92.']
+  ignore line: [ D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_c1d92.exe D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. CMakeFiles/cmTC_c1d92.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_c1d92.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c1d92.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_c1d92.']
   ignore line: []
   ignore line: []
   implicit libs: []
@@ -187,12 +171,9 @@ Parsed C implicit link information from above output:
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/HP/Desktop/Scanner/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command(s):D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_ad84e/fast && D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\cmTC_ad84e.dir\build.make CMakeFiles/cmTC_ad84e.dir/build
-mingw32-make[1]: Entering directory 'C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_ad84e.dir/CMakeCXXCompilerABI.cpp.obj
-"D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\g++.exe"   -v -o CMakeFiles\cmTC_ad84e.dir\CMakeCXXCompilerABI.cpp.obj -c "D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\share\cmake-3.21\Modules\CMakeCXXCompilerABI.cpp"
+Run Build Command(s):D:/JETBRAIN/CLion 2021.3.3/bin/ninja/win/ninja.exe cmTC_d74a5 && [1/2] Building CXX object CMakeFiles/cmTC_d74a5.dir/CMakeCXXCompilerABI.cpp.obj
 Using built-in specs.
 COLLECT_GCC=D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\g++.exe
 Target: x86_64-w64-mingw32
@@ -200,8 +181,8 @@ Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_
 Thread model: posix
 Supported LTO compression algorithms: zlib
 gcc version 11.2.0 (GCC) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_ad84e.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_ad84e.dir\'
- D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1plus.exe -quiet -v -iprefix D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\share\cmake-3.21\Modules\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\cmTC_ad84e.dir\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\Users\HP\AppData\Local\Temp\cc9DWIyk.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d74a5.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d74a5.dir/'
+ D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1plus.exe -quiet -v -iprefix D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:/JETBRAIN/CLion 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_d74a5.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\Users\HP\AppData\Local\Temp\ccKRF83z.s
 GNU C++17 (GCC) version 11.2.0 (x86_64-w64-mingw32)
 	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -228,17 +209,13 @@ GNU C++17 (GCC) version 11.2.0 (x86_64-w64-mingw32)
 	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 916242a6eadede3a42d72bc0142b939f
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_ad84e.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_ad84e.dir\'
- as -v -o CMakeFiles\cmTC_ad84e.dir\CMakeCXXCompilerABI.cpp.obj C:\Users\HP\AppData\Local\Temp\cc9DWIyk.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d74a5.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d74a5.dir/'
+ as -v -o CMakeFiles/cmTC_d74a5.dir/CMakeCXXCompilerABI.cpp.obj C:\Users\HP\AppData\Local\Temp\ccKRF83z.s
 GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37
 COMPILER_PATH=D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/
 LIBRARY_PATH=D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_ad84e.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_ad84e.dir\CMakeCXXCompilerABI.cpp.'
-Linking CXX executable cmTC_ad84e.exe
-"D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_ad84e.dir\link.txt --verbose=1
-"D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_ad84e.dir/objects.a
-"D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\ar.exe" qc CMakeFiles\cmTC_ad84e.dir/objects.a @CMakeFiles\cmTC_ad84e.dir\objects1.rsp
-"D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\g++.exe"  -v -Wl,--whole-archive CMakeFiles\cmTC_ad84e.dir/objects.a -Wl,--no-whole-archive -o cmTC_ad84e.exe -Wl,--out-implib,libcmTC_ad84e.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d74a5.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d74a5.dir/CMakeCXXCompilerABI.cpp.'
+[2/2] Linking CXX executable cmTC_d74a5.exe
 Using built-in specs.
 COLLECT_GCC=D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\g++.exe
 COLLECT_LTO_WRAPPER=D:/JETBRAIN/CLion\ 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe
@@ -249,10 +226,9 @@ Supported LTO compression algorithms: zlib
 gcc version 11.2.0 (GCC) 
 COMPILER_PATH=D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/
 LIBRARY_PATH=D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ad84e.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ad84e.'
- D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_ad84e.exe D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. --whole-archive CMakeFiles\cmTC_ad84e.dir/objects.a --no-whole-archive --out-implib libcmTC_ad84e.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ad84e.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ad84e.'
-mingw32-make[1]: Leaving directory 'C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d74a5.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d74a5.'
+ D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_d74a5.exe D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. CMakeFiles/cmTC_d74a5.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_d74a5.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d74a5.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d74a5.'
 
 
 
@@ -279,12 +255,9 @@ Parsed CXX implicit include dir info from above output: rv=done
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: C:/Users/HP/Desktop/Scanner/cmake-build-release/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_ad84e/fast && D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\cmTC_ad84e.dir\build.make CMakeFiles/cmTC_ad84e.dir/build]
-  ignore line: [mingw32-make[1]: Entering directory 'C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_ad84e.dir/CMakeCXXCompilerABI.cpp.obj]
-  ignore line: ["D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\g++.exe"   -v -o CMakeFiles\cmTC_ad84e.dir\CMakeCXXCompilerABI.cpp.obj -c "D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\share\cmake-3.21\Modules\CMakeCXXCompilerABI.cpp"]
+  ignore line: [Run Build Command(s):D:/JETBRAIN/CLion 2021.3.3/bin/ninja/win/ninja.exe cmTC_d74a5 && [1/2] Building CXX object CMakeFiles/cmTC_d74a5.dir/CMakeCXXCompilerABI.cpp.obj]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\g++.exe]
   ignore line: [Target: x86_64-w64-mingw32]
@@ -292,8 +265,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib]
   ignore line: [gcc version 11.2.0 (GCC) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_ad84e.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_ad84e.dir\']
-  ignore line: [ D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1plus.exe -quiet -v -iprefix D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\share\cmake-3.21\Modules\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\cmTC_ad84e.dir\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\Users\HP\AppData\Local\Temp\cc9DWIyk.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d74a5.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d74a5.dir/']
+  ignore line: [ D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1plus.exe -quiet -v -iprefix D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:/JETBRAIN/CLion 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_d74a5.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\Users\HP\AppData\Local\Temp\ccKRF83z.s]
   ignore line: [GNU C++17 (GCC) version 11.2.0 (x86_64-w64-mingw32)]
   ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -320,8 +293,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 916242a6eadede3a42d72bc0142b939f]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_ad84e.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_ad84e.dir\']
-  ignore line: [ as -v -o CMakeFiles\cmTC_ad84e.dir\CMakeCXXCompilerABI.cpp.obj C:\Users\HP\AppData\Local\Temp\cc9DWIyk.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d74a5.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d74a5.dir/']
+  ignore line: [ as -v -o CMakeFiles/cmTC_d74a5.dir/CMakeCXXCompilerABI.cpp.obj C:\Users\HP\AppData\Local\Temp\ccKRF83z.s]
   ignore line: [GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37]
   ignore line: [COMPILER_PATH=D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/]
   ignore line: [D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/]
@@ -331,12 +304,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
   ignore line: [D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
   ignore line: [D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_ad84e.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_ad84e.dir\CMakeCXXCompilerABI.cpp.']
-  ignore line: [Linking CXX executable cmTC_ad84e.exe]
-  ignore line: ["D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_ad84e.dir\link.txt --verbose=1]
-  ignore line: ["D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_ad84e.dir/objects.a]
-  ignore line: ["D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\ar.exe" qc CMakeFiles\cmTC_ad84e.dir/objects.a @CMakeFiles\cmTC_ad84e.dir\objects1.rsp]
-  ignore line: ["D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\g++.exe"  -v -Wl --whole-archive CMakeFiles\cmTC_ad84e.dir/objects.a -Wl --no-whole-archive -o cmTC_ad84e.exe -Wl --out-implib libcmTC_ad84e.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d74a5.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d74a5.dir/CMakeCXXCompilerABI.cpp.']
+  ignore line: [[2/2] Linking CXX executable cmTC_d74a5.exe]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\g++.exe]
   ignore line: [COLLECT_LTO_WRAPPER=D:/JETBRAIN/CLion\ 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe]
@@ -353,10 +322,9 @@ Parsed CXX implicit link information from above output:
   ignore line: [D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
   ignore line: [D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
   ignore line: [D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ad84e.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ad84e.']
-  ignore line: [ D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_ad84e.exe D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. --whole-archive CMakeFiles\cmTC_ad84e.dir/objects.a --no-whole-archive --out-implib libcmTC_ad84e.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ad84e.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ad84e.']
-  ignore line: [mingw32-make[1]: Leaving directory 'C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/CMakeTmp']
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d74a5.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d74a5.']
+  ignore line: [ D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_d74a5.exe D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. CMakeFiles/cmTC_d74a5.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_d74a5.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d74a5.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d74a5.']
   ignore line: []
   ignore line: []
   implicit libs: []
@@ -366,34 +334,18 @@ Parsed CXX implicit link information from above output:
 
 
 Determining if the include file pthread.h exists passed with the following output:
-Change Dir: C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/HP/Desktop/Scanner/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command(s):D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_65502/fast && D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\cmTC_65502.dir\build.make CMakeFiles/cmTC_65502.dir/build
-mingw32-make[1]: Entering directory 'C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_65502.dir/CheckIncludeFile.c.obj
-"D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\gcc.exe"    -o CMakeFiles\cmTC_65502.dir\CheckIncludeFile.c.obj -c C:\Users\HP\CLionProjects\Scanner\cmake-build-release\CMakeFiles\CMakeTmp\CheckIncludeFile.c
-Linking C executable cmTC_65502.exe
-"D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_65502.dir\link.txt --verbose=1
-"D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_65502.dir/objects.a
-"D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\ar.exe" qc CMakeFiles\cmTC_65502.dir/objects.a @CMakeFiles\cmTC_65502.dir\objects1.rsp
-"D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\gcc.exe" -static  -Wl,--whole-archive CMakeFiles\cmTC_65502.dir/objects.a -Wl,--no-whole-archive -o cmTC_65502.exe -Wl,--out-implib,libcmTC_65502.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_65502.dir\linklibs.rsp
-mingw32-make[1]: Leaving directory 'C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command(s):D:/JETBRAIN/CLion 2021.3.3/bin/ninja/win/ninja.exe cmTC_32918 && [1/2] Building C object CMakeFiles/cmTC_32918.dir/CheckIncludeFile.c.obj
+[2/2] Linking C executable cmTC_32918.exe
 
 
 
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
-Change Dir: C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/HP/Desktop/Scanner/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command(s):D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_b6876/fast && D:/JETBRAIN/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\cmTC_b6876.dir\build.make CMakeFiles/cmTC_b6876.dir/build
-mingw32-make[1]: Entering directory 'C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b6876.dir/src.c.obj
-"D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\gcc.exe" -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles\cmTC_b6876.dir\src.c.obj -c C:\Users\HP\CLionProjects\Scanner\cmake-build-release\CMakeFiles\CMakeTmp\src.c
-Linking C executable cmTC_b6876.exe
-"D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_b6876.dir\link.txt --verbose=1
-"D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_b6876.dir/objects.a
-"D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\ar.exe" qc CMakeFiles\cmTC_b6876.dir/objects.a @CMakeFiles\cmTC_b6876.dir\objects1.rsp
-"D:\JETBRAIN\CLion 2021.3.3\bin\mingw\bin\gcc.exe" -static  -Wl,--whole-archive CMakeFiles\cmTC_b6876.dir/objects.a -Wl,--no-whole-archive -o cmTC_b6876.exe -Wl,--out-implib,libcmTC_b6876.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_b6876.dir\linklibs.rsp
-mingw32-make[1]: Leaving directory 'C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command(s):D:/JETBRAIN/CLion 2021.3.3/bin/ninja/win/ninja.exe cmTC_f0a01 && [1/2] Building C object CMakeFiles/cmTC_f0a01.dir/src.c.obj
+[2/2] Linking C executable cmTC_f0a01.exe
 
 
 Source file was:

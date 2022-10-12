@@ -1,3 +1,16 @@
-int a[4][2] ={};
-int b[4][2]  = {1,2,3,4,5,6,7,8};
-int c[4][2] = {{1,2},{3,4},5,6,7,8};
+_
+_0
+pppo
+op  true false _
+const yes no shared_ptr unique_ptr
+Ref Scope System out println
+vufusbinso thread main good bad
+multi_thread atomic electric
+number m_Camera matrix mat4
+io_system 
+
+int
+float
+if
+else
+while

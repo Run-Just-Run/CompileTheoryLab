@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/HP/CLionProjects/Scanner/vendor/spdlog-1.x
+# Install script for directory: C:/Users/HP/Desktop/Scanner/vendor/spdlog-1.x
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

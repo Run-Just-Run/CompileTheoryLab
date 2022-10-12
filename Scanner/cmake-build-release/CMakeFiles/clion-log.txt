@@ -1,4 +1,4 @@
-"D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - MinGW Makefiles" C:\Users\HP\CLionProjects\Scanner
+"D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release "-DCMAKE_MAKE_PROGRAM=D:/JETBRAIN/CLion 2021.3.3/bin/ninja/win/ninja.exe" -G Ninja C:\Users\HP\Desktop\Scanner
 -- The C compiler identification is GNU 11.2.0
 -- The CXX compiler identification is GNU 11.2.0
 -- Detecting C compiler ABI info
@@ -20,4 +20,4 @@
 -- Build type: Release
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/HP/CLionProjects/Scanner/cmake-build-release
+-- Build files have been written to: C:/Users/HP/Desktop/Scanner/cmake-build-release

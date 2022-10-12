@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/HP/CLionProjects/Scanner
+# Install script for directory: C:/Users/HP/Desktop/Scanner
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/HP/CLionProjects/Scanner/cmake-build-release/vendor/spdlog-1.x/cmake_install.cmake")
+  include("C:/Users/HP/Desktop/Scanner/cmake-build-release/vendor/spdlog-1.x/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/HP/CLionProjects/Scanner/cmake-build-release/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/HP/Desktop/Scanner/cmake-build-release/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -13,10 +13,6 @@ namespace Scanner {
         NEWLINE,
         WHITE_SPACE_CHAR,
         UNDERSCORE,
-        DOT,
-        SINGLE_SIGN,
-        DOUBLE_SIGN,
-        SLASH,
         UNKNOWN_TYPE
     };
 
@@ -30,28 +26,6 @@ namespace Scanner {
         {
             STATE_BEGIN,
             STATE_IDENT,
-            STATE_PREFIX_ZERO,
-            STATE_INT_DEC,
-            STATE_INT_OCT,
-            STATE_INT_HEX_PRE,
-            STATE_INT_HEX,
-            STATE_DEC_DOT,
-            STATE_DEC_DOT_BEGIN,
-            STATE_HEX_DOT,
-            STATE_HEX_FLOAT_PRE,
-            STATE_HEX_FLOAT,
-            STATE_HEX_FLOAT_SIGN,
-            STATE_HEX_FLOAT_READY,
-            STATE_DEC_FLOAT,
-            STATE_DEC_FLOAT_PRE,
-            STATE_DEC_FLOAT_SIGN,
-            STATE_COMMENT_LINE,
-            STATE_COMMENT_PARAGRAPH,
-            STATE_WAIT_EQUAL,
-            STATE_WAIT_AND,
-            STATE_WAIT_OR,
-            STATE_TO_COMMENT,
-            STATE_END_COMMENT,
             STATE_EMPTY
         };
 
@@ -87,14 +61,12 @@ namespace Scanner {
             if(!(m_file_out->is_open()))SCANNER_CORE_ERROR("Out File Open Error!");
         }
 
-        CHAR_TYPE char2CharType(char source);
-
         void Run();
 
         void OutputInfo();
 
         void reportError();
-        void reportResult(int categoryCode, std::string text ="");
+        void reportResult(int categoryCode);
 
     private:
         Scanner();
