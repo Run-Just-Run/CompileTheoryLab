@@ -21,7 +21,7 @@
 #include <string.h>
 #include <errno.h>
 #include <stdlib.h>
-
+#include <time.h>
 /* end standard C headers. */
 
 /* flex integer type definitions */
@@ -1751,9 +1751,14 @@ void yyfree (void * ptr )
 #line 17 "lex.l"
 
 int main(){
+	clock_t start, end;
+	start = clock();
 	yyin=fopen("C:\\Users\\86133\\Desktop\\win_flex_bison-latest\\test.txt","r");
 	yylex();
-	getchar();
+	end = clock();
+	double elapsedTime = (double)(end - start) / CLOCKS_PER_SEC;
+	printf("CPU PROCESSING TIME: %f", elapsedTime);
+	getchar();	
 	return 0;
 }
 int yywrap(){
