@@ -1,6 +1,0 @@
-C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/rebuild_cache.dir
-C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/Scanner.dir
-C:/Users/HP/CLionProjects/Scanner/cmake-build-release/CMakeFiles/edit_cache.dir
-C:/Users/HP/CLionProjects/Scanner/cmake-build-release/vendor/spdlog-1.x/CMakeFiles/spdlog.dir
-C:/Users/HP/CLionProjects/Scanner/cmake-build-release/vendor/spdlog-1.x/CMakeFiles/edit_cache.dir
-C:/Users/HP/CLionProjects/Scanner/cmake-build-release/vendor/spdlog-1.x/CMakeFiles/rebuild_cache.dir

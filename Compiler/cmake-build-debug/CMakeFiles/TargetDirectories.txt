@@ -1,0 +1,6 @@
+C:/Users/HP/CLionProjects/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir
+C:/Users/HP/CLionProjects/Compiler/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/HP/CLionProjects/Compiler/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/HP/CLionProjects/Compiler/cmake-build-debug/vendor/spdlog-1.x/CMakeFiles/spdlog.dir
+C:/Users/HP/CLionProjects/Compiler/cmake-build-debug/vendor/spdlog-1.x/CMakeFiles/edit_cache.dir
+C:/Users/HP/CLionProjects/Compiler/cmake-build-debug/vendor/spdlog-1.x/CMakeFiles/rebuild_cache.dir

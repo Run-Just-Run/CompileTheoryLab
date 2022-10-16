@@ -1,0 +1,16 @@
+# ninja log v5
+25	3898	6875554849278945	vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.obj	9083e6198d99052d
+50	2704	6875554837332947	vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/cfg.cpp.obj	64f27ba42f7e83e3
+4	1297	6875943228292416	CMakeFiles/Compiler.dir/main.cpp.obj	e5976c96f6a77a9a
+1321	1795	6875943233202965	Compiler.exe	7da0bf5fc3bc5dd2
+10	2139	6875554831204191	CMakeFiles/Compiler.dir/Log.cpp.obj	8695da5433674395
+9	1320	6875943228522930	CMakeFiles/Compiler.dir/Parser/Parser.cpp.obj	de3bc34ca7a9e5ea
+31	2890	6875554839193350	vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/file_sinks.cpp.obj	b78ef34eb131d13e
+43	2950	6875554839782713	vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/async.cpp.obj	8a2f6d9a4dc3ea4
+4	3478	6875939387977043	CMakeFiles/Compiler.dir/Scanner/src/Scanner.cpp.obj	ea4ff938a05e38c5
+37	4049	6875554850778304	vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/color_sinks.cpp.obj	f7d43b836ab70502
+56	5237	6875554862656426	vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/fmt.cpp.obj	395fe33e7894b926
+19	9202	6875554902288048	vendor/spdlog-1.x/CMakeFiles/spdlog.dir/src/spdlog.cpp.obj	53cb5a3489895ed3
+9203	9355	6875554903862824	vendor/spdlog-1.x/libspdlog.a	33d0fde91213895
+5	1455	6875943372882323	CMakeFiles/Compiler.dir/Parser/Parser.cpp.obj	de3bc34ca7a9e5ea
+1456	1980	6875943378081578	Compiler.exe	7da0bf5fc3bc5dd2
