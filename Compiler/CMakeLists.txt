@@ -11,5 +11,5 @@ if(NOT TARGET spdlog)
     find_package(spdlog REQUIRED)
 endif()
 
-add_executable(Compiler main.cpp Timer.h Scanner/src/Scanner.cpp Scanner/src/Scanner.h Log.cpp Log.h Scanner/src/Core.h Parser/Parser.cpp Parser/Parser.h)
+add_executable(Compiler main.cpp Timer.h Scanner/src/Scanner.cpp Scanner/src/Scanner.h Log.cpp Log.h Scanner/src/Core.h Parser/src/Parser.cpp Parser/src/Parser.h Parser/src/ASTNode.h)
 target_link_libraries(Compiler PRIVATE spdlog::spdlog)

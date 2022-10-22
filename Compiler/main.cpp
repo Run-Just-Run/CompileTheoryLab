@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Log.h"
 #include"Scanner/src/Scanner.h"
-#include "Parser/Parser.h"
+#include "Parser/src/Parser.h"
 #include "Log.h"
 #include "Timer.h"
 #include <filesystem>
@@ -27,6 +27,7 @@ int main() {
     Parser::Parser::getParser().setTokenBuffer(Scanner::Scanner::getScanner().getResult());
     Parser::Parser::getParser().setPositionBuffer(Scanner::Scanner::getScanner().getPositionInfo());
     std::cout<<Parser::Parser::getParser().Run()<<std::endl;
+    Parser::PrintTree(Parser::Parser::getParser().getAST());
 
 
     system("pause");

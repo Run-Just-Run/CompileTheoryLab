@@ -1,5 +1,5 @@
 #pragma once
-//#define TIMETEST
+#define TIMETEST
 #include <iostream>
 #include <filesystem>
 #include<fstream>

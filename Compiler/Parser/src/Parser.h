@@ -1,12 +1,14 @@
 #pragma once
 //#define TIMETEST
 #include <iostream>
-#include <filesystem>
 #include<fstream>
 #include <unordered_set>
-#include "../Log.h"
+#include <stack>
+#include "../../Log.h"
+#include "ASTNode.h"
 
 namespace Parser {
+
     class Parser {
     public:
         Parser(const Parser&)=delete;
@@ -25,6 +27,10 @@ namespace Parser {
         inline void setPositionBuffer(const std::vector<std::vector<int>>&v)
         {
             pos_buffer=v;
+        }
+        inline ASTNode* getAST(){
+            //std::cout<<root<<std::endl;
+            return root;
         }
         bool Run();
 
@@ -51,8 +57,16 @@ namespace Parser {
         std::pair<int,std::string>m_Token;
         int position;
         bool errorFlag=0;
+        bool finalCheck=1;
+        int urgency=0;
+
+        ASTNode*root;
+        std::stack<ASTNode*>AST_stack;
     private:
         void matchToken(std::pair<int,std::string>token);
+        void creatTree(std::pair<int,std::string>token);
     };
+
+    void PrintTree(ASTNode*);
 }
 
