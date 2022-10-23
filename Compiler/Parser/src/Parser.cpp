@@ -5,7 +5,7 @@ namespace Parser {
     bool Parser::Run() {
         position = 0;
         m_Token = token_buffer[0];
-        root = new ASTNode("");
+        root = new ASTNode("",urgency);
         AST_stack.push(root);
         while (position < token_buffer.size() - 1) {
             while (AST_stack.top() != root && AST_stack.size() >= 1)AST_stack.pop();
@@ -104,7 +104,6 @@ namespace Parser {
         } else if (m_Token.second == "+" || m_Token.second == "-") {
             ParseUO_C();
             ParseUE();
-            //AST_stack.pop();
         } else if (m_Token.second == "(" || m_Token.first == 3) {
             ParsePE();
         } else {
@@ -193,7 +192,6 @@ namespace Parser {
         if (m_Token.second == "+" || m_Token.second == "-" || m_Token.second == "*" || m_Token.second == "/" ||
             m_Token.second == "%" || m_Token.second == "," || m_Token.second == ")") {
             AST_stack.top()->setOpFlag(false);
-            //AST_stack.pop();
         } else if (m_Token.second == "(") {
             matchToken({-1, "("});
             ParseFP();
@@ -247,27 +245,22 @@ namespace Parser {
                 AST_stack.top()->addChild(new_node);
                 new_node->setOpFlag(true);
                 AST_stack.push(new_node);
-                //PrintTree(root);
-                //std::cout<<AST_stack.top()->getContent()<<std::endl;
             } else {
                 if (s == "+" || s == "-" || s == "*" || s == "/" || s == "%") {
                     AST_stack.top()->addChild(new_node);
-                    //AST_stack.push(new_node);
                 } else {
                     AST_stack.top()->addChild(new_node);
                     AST_stack.push(new_node);
-                    //std::cout<<new_node->getContent()<<std::endl;
                 }
-                //PrintTree(root);
             }
+            PrintTree(root);
         } else {
             if (token.second == "+" || token.second == "-" || token.second == "*" || token.second == "/" ||
                 token.second == "%") {
                 ASTNode *new_node = new ASTNode(m_Token.second,urgency);
                 new_node->setOpFlag(true);
-                //std::cout<<AST_stack.top()->getContent();
+
                 if (!temp->getOpFlag()) {
-                    //std::cout<<temp->getContent()<<std::endl;
                     if (s != "" && (token.second == "+" || token.second == "-")) {
                         AST_stack.pop();
                         std::string s1 = AST_stack.top()->getContent();
@@ -288,7 +281,7 @@ namespace Parser {
                     } else if (s != "") {
                         AST_stack.pop();
                         std::string s1 = AST_stack.top()->getContent();
-                        if(AST_stack.top()->getUrgency()<urgency||(AST_stack.top()->getUrgency()==urgency&&(s1 == "+" || s1 == "-")))
+                        if(AST_stack.top()->getUrgency()<urgency||(AST_stack.top()->getUrgency()==urgency&&(s1 == "+" || s1 == "-"||s1=="")))
                         {
                             AST_stack.top()->getChldren().pop_back();
                             new_node->addChild(temp);
@@ -346,12 +339,11 @@ namespace Parser {
                             AST_stack.push(new_node);
                         }
                     }
-                    //PrintTree(root);
                 } else {
                     temp->addChild(new_node);
                     AST_stack.push(new_node);
-                    //PrintTree(root);
                 }
+                PrintTree(root);
             }
         }
 
