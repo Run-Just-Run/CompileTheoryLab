@@ -4,7 +4,7 @@
 #include <string>
 #include<iostream>
 
-namespace Parser {
+namespace PARSER {
     class ASTNode {
     public:
         ASTNode(std::string content, int urgency=0):m_content(content),urgency(urgency){
@@ -25,12 +25,31 @@ namespace Parser {
             children.push_back(newChild);
         };
 
-        inline void setOpFlag(bool flag){
-            opFlag=flag;
+        inline void setOpFlag(bool Flag){
+            if(Flag)flag|=1;
+            else flag&=INT32_MAX-1;
+        }
+
+        inline void setFuncFlag(bool Flag){
+            if(Flag)flag|=(1<<1);
+            else flag&=INT32_MAX-(1<<1);
+        }
+
+        inline bool getFuncFlag(){
+            return flag&(1<<1);
         }
 
         inline bool getOpFlag(){
-            return opFlag;
+            return flag&1;
+        }
+
+        inline void setConstFlag(bool Flag){
+            if(Flag)flag|=(1<<2);
+            else flag&=INT32_MAX-(1<<2);
+        }
+
+        inline bool getConstFlag(){
+            return flag&(1<<2);
         }
 
         inline int getUrgency(){
@@ -38,11 +57,13 @@ namespace Parser {
         };
 
     private:
+        int flag=0;/*the first bit represent if this is an operator
+ *                   the second bit represent if this is a function usage
+ *                   the third bit represent if this is a const decl*/
+
         std::vector<ASTNode*>children;
 
         std::string m_content;
-
-        bool opFlag=0;
 
         int urgency;
     };

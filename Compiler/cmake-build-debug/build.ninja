@@ -57,13 +57,13 @@ build CMakeFiles/Compiler.dir/main.cpp.obj: CXX_COMPILER__Compiler_Debug C$:/Use
   OBJECT_DIR = CMakeFiles\Compiler.dir
   OBJECT_FILE_DIR = CMakeFiles\Compiler.dir
 
-build CMakeFiles/Compiler.dir/Scanner/src/Scanner.cpp.obj: CXX_COMPILER__Compiler_Debug C$:/Users/HP/CLionProjects/Compiler/Scanner/src/Scanner.cpp || cmake_object_order_depends_target_Compiler
+build CMakeFiles/Compiler.dir/SCANNER/src/SCANNER.cpp.obj: CXX_COMPILER__Compiler_Debug C$:/Users/HP/CLionProjects/Compiler/SCANNER/src/SCANNER.cpp || cmake_object_order_depends_target_Compiler
   DEFINES = -DSPDLOG_COMPILED_LIB
-  DEP_FILE = CMakeFiles\Compiler.dir\Scanner\src\Scanner.cpp.obj.d
+  DEP_FILE = CMakeFiles\Compiler.dir\SCANNER\src\SCANNER.cpp.obj.d
   FLAGS = -g -std=gnu++17
   INCLUDES = -IC:/Users/HP/CLionProjects/Compiler/vendor/spdlog-1.x/include
   OBJECT_DIR = CMakeFiles\Compiler.dir
-  OBJECT_FILE_DIR = CMakeFiles\Compiler.dir\Scanner\src
+  OBJECT_FILE_DIR = CMakeFiles\Compiler.dir\SCANNER\src
 
 build CMakeFiles/Compiler.dir/Log.cpp.obj: CXX_COMPILER__Compiler_Debug C$:/Users/HP/CLionProjects/Compiler/Log.cpp || cmake_object_order_depends_target_Compiler
   DEFINES = -DSPDLOG_COMPILED_LIB
@@ -73,13 +73,13 @@ build CMakeFiles/Compiler.dir/Log.cpp.obj: CXX_COMPILER__Compiler_Debug C$:/User
   OBJECT_DIR = CMakeFiles\Compiler.dir
   OBJECT_FILE_DIR = CMakeFiles\Compiler.dir
 
-build CMakeFiles/Compiler.dir/Parser/Parser.cpp.obj: CXX_COMPILER__Compiler_Debug C$:/Users/HP/CLionProjects/Compiler/Parser/Parser.cpp || cmake_object_order_depends_target_Compiler
+build CMakeFiles/Compiler.dir/RecurParser/RecurParser.cpp.obj: CXX_COMPILER__Compiler_Debug C$:/Users/HP/CLionProjects/Compiler/RecurParser/RecurParser.cpp || cmake_object_order_depends_target_Compiler
   DEFINES = -DSPDLOG_COMPILED_LIB
-  DEP_FILE = CMakeFiles\Compiler.dir\Parser\Parser.cpp.obj.d
+  DEP_FILE = CMakeFiles\Compiler.dir\RecurParser\RecurParser.cpp.obj.d
   FLAGS = -g -std=gnu++17
   INCLUDES = -IC:/Users/HP/CLionProjects/Compiler/vendor/spdlog-1.x/include
   OBJECT_DIR = CMakeFiles\Compiler.dir
-  OBJECT_FILE_DIR = CMakeFiles\Compiler.dir\Parser
+  OBJECT_FILE_DIR = CMakeFiles\Compiler.dir\RecurParser
 
 
 # =============================================================================
@@ -89,7 +89,7 @@ build CMakeFiles/Compiler.dir/Parser/Parser.cpp.obj: CXX_COMPILER__Compiler_Debu
 #############################################
 # Link the executable Compiler.exe
 
-build Compiler.exe: CXX_EXECUTABLE_LINKER__Compiler_Debug CMakeFiles/Compiler.dir/main.cpp.obj CMakeFiles/Compiler.dir/Scanner/src/Scanner.cpp.obj CMakeFiles/Compiler.dir/Log.cpp.obj CMakeFiles/Compiler.dir/Parser/Parser.cpp.obj | vendor/spdlog-1.x/libspdlogd.a || vendor/spdlog-1.x/libspdlogd.a
+build Compiler.exe: CXX_EXECUTABLE_LINKER__Compiler_Debug CMakeFiles/Compiler.dir/main.cpp.obj CMakeFiles/Compiler.dir/SCANNER/src/SCANNER.cpp.obj CMakeFiles/Compiler.dir/Log.cpp.obj CMakeFiles/Compiler.dir/RecurParser/RecurParser.cpp.obj | vendor/spdlog-1.x/libspdlogd.a || vendor/spdlog-1.x/libspdlogd.a
   FLAGS = -g
   LINK_FLAGS = -static
   LINK_LIBRARIES = vendor/spdlog-1.x/libspdlogd.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

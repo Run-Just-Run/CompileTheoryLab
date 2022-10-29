@@ -1,12 +1,12 @@
 #pragma once
-#define TIMETEST
+//#define TIMETEST
 #include <iostream>
 #include <filesystem>
 #include<fstream>
 #include <unordered_set>
 #include "../../Log.h"
 
-namespace Scanner {
+namespace SCANNER {
 
     enum class CHAR_TYPE:uint8_t
     {

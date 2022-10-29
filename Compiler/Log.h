@@ -2,7 +2,7 @@
 
 #include <memory>
 
-#include "Scanner/src/Core.h"
+#include "Core.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"
 
@@ -18,13 +18,14 @@ namespace Compiler {
     };
 }
 
+
 #ifndef TIMETEST
     // Core log macros
 #define CORE_TRACE(...)    Compiler::Log::GetCoreLogger()->trace(__VA_ARGS__)
 #define CORE_INFO(...)     Compiler::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define CORE_WARN(...)     Compiler::Log::GetCoreLogger()->warn(__VA_ARGS__)
 #define CORE_ERROR(...)    Compiler::Log::GetCoreLogger()->error(__VA_ARGS__)
-#define CORE_FATAL(...)    Compiler::Log::GetCoreLogger()->fatal(__VA_ARGS__)
+#define CORE_FATAL(...)    Compiler::Log::GetCoreLogger()->critical(__VA_ARGS__)
 #else
 #define CORE_TRACE(...)
 #define CORE_INFO(...)

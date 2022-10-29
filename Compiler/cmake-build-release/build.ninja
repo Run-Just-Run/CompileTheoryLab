@@ -73,6 +73,22 @@ build CMakeFiles/Compiler.dir/Log.cpp.obj: CXX_COMPILER__Compiler_Release C$:/Us
   OBJECT_DIR = CMakeFiles\Compiler.dir
   OBJECT_FILE_DIR = CMakeFiles\Compiler.dir
 
+build CMakeFiles/Compiler.dir/Parser/src/RecurParser.cpp.obj: CXX_COMPILER__Compiler_Release C$:/Users/HP/CLionProjects/Compiler/Parser/src/RecurParser.cpp || cmake_object_order_depends_target_Compiler
+  DEFINES = -DSPDLOG_COMPILED_LIB
+  DEP_FILE = CMakeFiles\Compiler.dir\Parser\src\RecurParser.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
+  INCLUDES = -IC:/Users/HP/CLionProjects/Compiler/vendor/spdlog-1.x/include
+  OBJECT_DIR = CMakeFiles\Compiler.dir
+  OBJECT_FILE_DIR = CMakeFiles\Compiler.dir\Parser\src
+
+build CMakeFiles/Compiler.dir/Parser/src/LRParser.cpp.obj: CXX_COMPILER__Compiler_Release C$:/Users/HP/CLionProjects/Compiler/Parser/src/LRParser.cpp || cmake_object_order_depends_target_Compiler
+  DEFINES = -DSPDLOG_COMPILED_LIB
+  DEP_FILE = CMakeFiles\Compiler.dir\Parser\src\LRParser.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
+  INCLUDES = -IC:/Users/HP/CLionProjects/Compiler/vendor/spdlog-1.x/include
+  OBJECT_DIR = CMakeFiles\Compiler.dir
+  OBJECT_FILE_DIR = CMakeFiles\Compiler.dir\Parser\src
+
 build CMakeFiles/Compiler.dir/Parser/src/Parser.cpp.obj: CXX_COMPILER__Compiler_Release C$:/Users/HP/CLionProjects/Compiler/Parser/src/Parser.cpp || cmake_object_order_depends_target_Compiler
   DEFINES = -DSPDLOG_COMPILED_LIB
   DEP_FILE = CMakeFiles\Compiler.dir\Parser\src\Parser.cpp.obj.d
@@ -89,7 +105,7 @@ build CMakeFiles/Compiler.dir/Parser/src/Parser.cpp.obj: CXX_COMPILER__Compiler_
 #############################################
 # Link the executable Compiler.exe
 
-build Compiler.exe: CXX_EXECUTABLE_LINKER__Compiler_Release CMakeFiles/Compiler.dir/main.cpp.obj CMakeFiles/Compiler.dir/Scanner/src/Scanner.cpp.obj CMakeFiles/Compiler.dir/Log.cpp.obj CMakeFiles/Compiler.dir/Parser/src/Parser.cpp.obj | vendor/spdlog-1.x/libspdlog.a || vendor/spdlog-1.x/libspdlog.a
+build Compiler.exe: CXX_EXECUTABLE_LINKER__Compiler_Release CMakeFiles/Compiler.dir/main.cpp.obj CMakeFiles/Compiler.dir/Scanner/src/Scanner.cpp.obj CMakeFiles/Compiler.dir/Log.cpp.obj CMakeFiles/Compiler.dir/Parser/src/RecurParser.cpp.obj CMakeFiles/Compiler.dir/Parser/src/LRParser.cpp.obj CMakeFiles/Compiler.dir/Parser/src/Parser.cpp.obj | vendor/spdlog-1.x/libspdlog.a || vendor/spdlog-1.x/libspdlog.a
   FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -static
   LINK_LIBRARIES = vendor/spdlog-1.x/libspdlog.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

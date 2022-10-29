@@ -1,72 +1,34 @@
 #pragma once
-//#define TIMETEST
 #include <iostream>
-#include<fstream>
-#include <unordered_set>
-#include <stack>
-#include "../../Log.h"
-#include "ASTNode.h"
+#include "../../log.h"
+#include "../../Core.h"
 
-namespace Parser {
-
-    class Parser {
-    public:
-        Parser(const Parser&)=delete;
-        Parser(const Parser&&)=delete;
-        static Parser& getParser()
-        {
-            static Parser m_Parser;
-            return m_Parser;
-        }
-        inline void setTokenBuffer(const std::vector<std::pair<int,std::string>>&v)
-        {
-            token_buffer=v;
-            if (token_buffer.back().second!="#")
-                token_buffer.push_back({5,"#"});
-        }
-        inline void setPositionBuffer(const std::vector<std::vector<int>>&v)
-        {
-            pos_buffer=v;
-        }
-        inline ASTNode* getAST(){
-            //std::cout<<root<<std::endl;
-            return root;
-        }
-        bool Run();
-
-        void ParseS();
-        void ParseADD();
-        void ParseMUL();
-        void ParsePE();
-        void ParseADD_();
-        void ParseMUL_();
-        void ParseUE();
-        void ParseNUM();
-        void ParseLV();
-        void ParseFP();
-        void ParseUO_C();
-        void ParseLV_();
-        void ParseFP_();
-        void ParseUE_();
-
-        void errorHandle();
-    private:
-        Parser(){}
-        std::vector<std::pair<int,std::string>>token_buffer;
-        std::vector<std::vector<int>>pos_buffer;
-        std::pair<int,std::string>m_Token;
-        int position;
-        bool errorFlag=0;
-        bool finalCheck=1;
-        int urgency=0;
-
-        ASTNode*root;
-        std::stack<ASTNode*>AST_stack;
-    private:
-        void matchToken(std::pair<int,std::string>token);
-        void creatTree(std::pair<int,std::string>token);
+namespace PARSER
+{
+    enum class MODE:uint8_t {
+        LRPARSER,
+        RECURPARSER
     };
 
-    void PrintTree(ASTNode*);
-}
+    class Parser{
+    public:
+        Parser(){}
+        Parser(const Parser&)=delete;
+        Parser(const Parser&&)=delete;
 
+        static Parser& getParser();
+
+        static inline void setMode(MODE mode)
+        {
+            m_Mode = mode;
+        }
+
+        virtual inline void setTokenBuffer(const std::vector<std::pair<int,std::string>>&v) =0 ;
+        virtual inline void setPositionBuffer(const std::vector<std::vector<int>>&v) =0 ;
+        virtual bool Run() =0 ;
+
+    private:
+        static MODE m_Mode;
+        static Parser*m_Parser;
+    };
+}

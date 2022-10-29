@@ -74,14 +74,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Compiler::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Compiler-Release-9c53daf58be98e880dfa.json",
+					"jsonFile" : "target-Compiler-Release-75b5733d1c75f6e2a644.json",
 					"name" : "Compiler",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "spdlog::@5022be2a6980ec9c223e",
-					"jsonFile" : "target-spdlog-Release-971c377f0131bdc2683e.json",
+					"jsonFile" : "target-spdlog-Release-d51caeb0b1eca9b60c69.json",
 					"name" : "spdlog",
 					"projectIndex" : 1
 				}
@@ -91,8 +91,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/HP/CLionProjects/Compiler/cmake-build-release",
-		"source" : "C:/Users/HP/CLionProjects/Compiler"
+		"build" : "C:/dev/CompileTheoryLab/Compiler/cmake-build-release",
+		"source" : "C:/dev/CompileTheoryLab/Compiler"
 	},
 	"version" : 
 	{

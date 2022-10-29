@@ -1,6 +1,6 @@
 #include "Scanner.h"
 
-namespace Scanner
+namespace SCANNER
 {
 
     std::unordered_set<std::string> Scanner::Reserved_Words = std::unordered_set<std::string>
@@ -26,7 +26,7 @@ namespace Scanner
                  source == ']'||source == '{'||
                  source == '}'||source == '('||
                  source == ')'||source == ','||
-                 source == ';')                                                             return CHAR_TYPE::SINGLE_SIGN;
+                 source == ';'||source==  '%')                                              return CHAR_TYPE::SINGLE_SIGN;
         else if (source == '|'||source == '&'||
                  source == '!'||source == '>'||
                  source == '<'||source == '=')                                              return CHAR_TYPE::DOUBLE_SIGN;
@@ -353,7 +353,7 @@ namespace Scanner
             }
             if(c==CHAR_TYPE::NEWLINE)m_Line++;
         }
-        if(m_Text!="")OutputInfo();
+        if(m_Text!=""&& char2CharType(m_Char)!=CHAR_TYPE::SINGLE_SIGN){OutputInfo();}
     #ifdef TIMETEST
         std::cout<<m_CharCount<<std::endl;
     #endif
@@ -397,7 +397,7 @@ namespace Scanner
             reportResult(4,"/");
         }
 
-        if(m_Char=='+'||m_Char=='-'||m_Char=='*')
+        if(m_Char=='+'||m_Char=='-'||m_Char=='*'||m_Char=='%')
         {
             std::string temp="";
             temp+=m_Char;
@@ -415,6 +415,7 @@ namespace Scanner
             temp+=m_Char;
             reportResult(6,temp);
         }
+        //m_Text="";
     }
 
     void Scanner::reportError()

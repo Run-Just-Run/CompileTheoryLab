@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Log.h"
 #include"Scanner/src/Scanner.h"
-#include "Parser/src/Parser.h"
+#include "Parser/src/RecurParser.h"
 #include "Log.h"
 #include "Timer.h"
 #include <filesystem>
@@ -9,25 +9,26 @@
 
 
 int main() {
-    Compiler::Log::Init("Scanner");
+    Compiler::Log::Init("SCANNER");
     CORE_WARN("Initialize Log!");
     /*std::filesystem::path path("C:\\Users\\HP\\Desktop\\test");
     {
         Timer t;
         for (const auto &part: std::filesystem::directory_iterator(path)) {
-            Scanner::Scanner::getScanner().setIn(part.path().string());
-            Scanner::Scanner::getScanner().setOut("result_Scanner.txt");
-            Scanner::Scanner::getScanner().Run();
+            SCANNER::SCANNER::getScanner().setIn(part.path().string());
+            SCANNER::SCANNER::getScanner().setOut("result_Scanner.txt");
+            SCANNER::SCANNER::getScanner().Run();
         }
     }*/
-    Scanner::Scanner::getScanner().setIn("test.txt");
-    Scanner::Scanner::getScanner().setOut("result.txt");
-    Scanner::Scanner::getScanner().Run();
+    SCANNER::Scanner::getScanner().setIn("text.txt");
+    SCANNER::Scanner::getScanner().setOut("result.txt");
+    SCANNER::Scanner::getScanner().Run();
     Compiler::Log::Init("Parser");
-    Parser::Parser::getParser().setTokenBuffer(Scanner::Scanner::getScanner().getResult());
-    Parser::Parser::getParser().setPositionBuffer(Scanner::Scanner::getScanner().getPositionInfo());
-    std::cout<<Parser::Parser::getParser().Run()<<std::endl;
-    Parser::PrintTree(Parser::Parser::getParser().getAST());
+    PARSER::Parser::setMode(PARSER::MODE::LRPARSER);
+    PARSER::Parser::getParser().setTokenBuffer(SCANNER::Scanner::getScanner().getResult());
+    PARSER::Parser::getParser().setPositionBuffer(SCANNER::Scanner::getScanner().getPositionInfo());
+    std::cout << PARSER::Parser::getParser().Run() << std::endl;
+    //RecurParser::PrintTree(RecurParser::RecurParser::getParser().getAST());
 
 
     system("pause");
