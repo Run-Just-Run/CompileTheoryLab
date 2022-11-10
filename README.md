@@ -18,4 +18,4 @@ catagory code:<br>
 4:operators<br>
 5:all brackets<br>
 6:',' and ';'<br>
-
+7:float<br>
