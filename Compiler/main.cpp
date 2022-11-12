@@ -5,29 +5,21 @@
 #include "Log.h"
 #include "Timer.h"
 #include <filesystem>
+#include "Parser/src/TreeResolver.h"
 
 
 
 int main() {
-    Compiler::Log::Init("SCANNER");
-    CORE_WARN("Initialize Log!");
-    /*std::filesystem::path path("C:\\Users\\HP\\Desktop\\test");
-    {
-        Timer t;
-        for (const auto &part: std::filesystem::directory_iterator(path)) {
-            SCANNER::SCANNER::getScanner().setIn(part.path().string());
-            SCANNER::SCANNER::getScanner().setOut("result_Scanner.txt");
-            SCANNER::SCANNER::getScanner().Run();
-        }
-    }*/
     SCANNER::Scanner::getScanner().setIn("text.txt");
     SCANNER::Scanner::getScanner().setOut("result.txt");
     SCANNER::Scanner::getScanner().Run();
-    Compiler::Log::Init("Parser");
-    PARSER::Parser::setMode(PARSER::MODE::LRPARSER);
+
+    PARSER::Parser::setMode(PARSER::MODE::RECURPARSER);
     PARSER::Parser::getParser().setTokenBuffer(SCANNER::Scanner::getScanner().getResult());
     PARSER::Parser::getParser().setPositionBuffer(SCANNER::Scanner::getScanner().getPositionInfo());
-    std::cout << PARSER::Parser::getParser().Run() << std::endl;
+    PARSER::Parser::getParser().Run();
+    PARSER::TreeResolver::resolve(PARSER::RecurParser::getParser().getAST());
+
     //RecurParser::PrintTree(RecurParser::RecurParser::getParser().getAST());
 
 

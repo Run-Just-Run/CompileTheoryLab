@@ -6,7 +6,7 @@ namespace PARSER {
         CORE_ASSERT(0 <= token.first <= 6, "NOT A TOKEN!");
 
         if (token.first == 1) return VTYPE::IDENT;
-        else if (token.first == 3) return VTYPE::NUM;
+        else if (token.first == 3||token.first==7) return VTYPE::NUM;
         else if (token.second == "(") return VTYPE::L_PARENTHESES;
         else if (token.second == ")") return VTYPE::R_PARENTHESES;
         else if (token.second == "[") return VTYPE::L_PARENTHESES_;
@@ -19,12 +19,24 @@ namespace PARSER {
         return VTYPE::EMPTY;
     }
 
+    void printStack(std::stack<int> s) {
+        while (!s.empty()) {
+            std::cout << s.top() << " ";
+            s.pop();
+        }
+        std::cout << std::endl;
+    }
+
     bool LRParser::Run() {
+        Compiler::Log::Init("Parser");
+        m_Pos=-1;
+        t_Type=TTYPE::EMPTY;
         while (!status.empty())status.pop();
         status.push(0);
-        while (!signs.empty())status.pop();
+        while (!signs.empty())signs.pop();
         m_Token = token_buffer[0];
         type = token2vtype(m_Token);
+
         while (getNextToken()) {
             execute();
         }
@@ -36,7 +48,7 @@ namespace PARSER {
         type = token2vtype(m_Token);
 
         while (true) {
-            std::cout << status.top() << std::endl;
+            //printStack(status);
             switch (status.top()) {
                 case 0: {
                     if (t_Type == TTYPE::S) {
@@ -143,6 +155,7 @@ namespace PARSER {
                     break;
                 }
                 case 3: {
+                    CORE_INFO(m_Token.second);
                     if (type == VTYPE::END || type == VTYPE::P_SIGN || type == VTYPE::R_PARENTHESES ||
                         type == VTYPE::R_PARENTHESES_ || type == VTYPE::COMMA || type == VTYPE::NUM ||
                         type == VTYPE::L_PARENTHESES || type == VTYPE::IDENT) {
@@ -261,7 +274,8 @@ namespace PARSER {
                     break;
                 }
                 case 8: {
-                    if (type == VTYPE::END || type == VTYPE::P_SIGN || type == VTYPE::M_SIGN) {
+                    if (type == VTYPE::END || type == VTYPE::P_SIGN || type == VTYPE::M_SIGN ||
+                        type == VTYPE::R_PARENTHESES || type == VTYPE::R_PARENTHESES_ || type == VTYPE::COMMA) {
                         outSigns(1);
                         outStatus(1);
                         signs.push((int) TTYPE::LV);
@@ -400,7 +414,7 @@ namespace PARSER {
                         t_Type = TTYPE::EMPTY;
                     } else if (t_Type == TTYPE::ME) {
                         signs.push((int) TTYPE::ME);
-                        status.push(3);
+                        status.push(14);
                         t_Type = TTYPE::EMPTY;
                     } else if (t_Type == TTYPE::UO) {
                         signs.push((int) TTYPE::UO);
@@ -444,6 +458,10 @@ namespace PARSER {
                     if (type == VTYPE::R_PARENTHESES_) {
                         status.push(26);
                         signs.push((int) VTYPE::R_PARENTHESES_);
+                        return;
+                    } else if (type == VTYPE::P_SIGN) {
+                        status.push(2);
+                        signs.push((int) VTYPE::P_SIGN);
                         return;
                     } else {
                         errorHandle();
@@ -597,8 +615,8 @@ namespace PARSER {
                     break;
                 }
                 case 26: {
-                    outStatus(3);
-                    outSigns(3);
+                    outStatus(4);
+                    outSigns(4);
                     signs.push((int) (int) TTYPE::LV);
                     t_Type = TTYPE::LV;
                     break;
@@ -615,15 +633,16 @@ namespace PARSER {
     }
 
     bool LRParser::getNextToken() {
-        if (m_Pos >= (int) token_buffer.size()-1)
+        if (m_Pos >= (int) token_buffer.size() - 1)
             return false;
 
         m_Token = token_buffer[++m_Pos];
+        //CORE_INFO(m_Token.second);
         return true;
     }
 
     VTYPE LRParser::foreseenNextToken() {
-        if (m_Pos >= token_buffer.size())
+        if (m_Pos >= token_buffer.size() - 1)
             return VTYPE::EMPTY;
 
         return token2vtype(token_buffer[m_Pos + 1]);
@@ -631,6 +650,9 @@ namespace PARSER {
 
     void LRParser::errorHandle() {
         errorFlag = true;
+        CORE_ERROR("Line:" + std::to_string(pos_buffer[m_Pos][0]) + " CharBegin:" +
+                   std::to_string(pos_buffer[m_Pos][1]) + " CharEnd:" +
+                   std::to_string(pos_buffer[m_Pos][2]));
         CORE_ERROR("{0} is illegal here!", m_Token.second);
         while (foreseenNextToken() != VTYPE::NUM && foreseenNextToken() != VTYPE::IDENT
                && foreseenNextToken() != VTYPE::P_SIGN && foreseenNextToken() != VTYPE::L_PARENTHESES

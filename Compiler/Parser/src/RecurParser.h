@@ -74,6 +74,8 @@ namespace PARSER {
         bool inADD=0;
         ASTNode*root;
         std::stack<ASTNode*>AST_stack;
+
+        bool constSituation = 0;
     private:
         void matchToken(std::pair<int,std::string>token);
         void creatTree(std::pair<int,std::string>token);

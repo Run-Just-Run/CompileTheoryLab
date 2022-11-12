@@ -2,6 +2,7 @@
 
 #include <stack>
 #include "Parser.h"
+#define TIMETEST
 
 namespace PARSER {
 
@@ -38,6 +39,7 @@ namespace PARSER {
         inline void setPositionBuffer(const std::vector<std::vector<int>>&v)
         {
             pos_buffer=v;
+            pos_buffer.push_back({pos_buffer.back()[0],pos_buffer.back()[1]+1,pos_buffer.back()[1]+1});
         }
 
         bool Run();

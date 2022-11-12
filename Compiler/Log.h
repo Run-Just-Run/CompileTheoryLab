@@ -18,14 +18,14 @@ namespace Compiler {
     };
 }
 
-
+//#define TIMETEST
 #ifndef TIMETEST
     // Core log macros
 #define CORE_TRACE(...)    Compiler::Log::GetCoreLogger()->trace(__VA_ARGS__)
 #define CORE_INFO(...)     Compiler::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define CORE_WARN(...)     Compiler::Log::GetCoreLogger()->warn(__VA_ARGS__)
 #define CORE_ERROR(...)    Compiler::Log::GetCoreLogger()->error(__VA_ARGS__)
-#define CORE_FATAL(...)    Compiler::Log::GetCoreLogger()->critical(__VA_ARGS__)
+#define CORE_FATAL(...)    {Compiler::Log::GetCoreLogger()->critical(__VA_ARGS__); __debugbreak();}
 #else
 #define CORE_TRACE(...)
 #define CORE_INFO(...)

@@ -65,6 +65,7 @@ namespace SCANNER
 
     void Scanner::Run()
     {
+        Compiler::Log::Init("SCANNER");
         if(m_file_in==nullptr||m_file_out==nullptr)
             CORE_ERROR("Unspecified IO file!");
         m_State=STATE::STATE_BEGIN;
@@ -109,6 +110,7 @@ namespace SCANNER
                     else if (m_Char=='|')                                                                                {m_Text.pop_back();OutputInfo();m_Text="|";m_State=STATE::STATE_WAIT_OR;}
                     else if (m_Char=='&')                                                                                {m_Text.pop_back();OutputInfo();m_Text="&";m_State=STATE::STATE_WAIT_AND;}
                     else if (m_Char=='<'||m_Char=='>'||m_Char=='!'||m_Char=='=')                                         {m_Text.pop_back();OutputInfo();m_Text="";m_Text+=m_Char;m_State=STATE::STATE_WAIT_EQUAL;}
+                    else if (c == CHAR_TYPE::DOT)                                                                        {m_State=STATE::STATE_DEC_FLOAT;}
                     else if (m_Char=='x'||m_Char=='X')                                                                   {m_State=STATE::STATE_INT_HEX;}
                     else if (m_Char<='7'&&m_Char>='0')                                                                   {m_State=STATE::STATE_INT_OCT;}
                     else                                                                                                 {reportError();}
@@ -372,10 +374,12 @@ namespace SCANNER
             }
         }
         else if(m_State == STATE::STATE_INT_DEC  ||m_State == STATE::STATE_INT_HEX||
-                m_State == STATE::STATE_INT_OCT  ||m_State == STATE::STATE_PREFIX_ZERO||
-                m_State == STATE::STATE_DEC_DOT  ||m_State == STATE::STATE_DEC_FLOAT||
-                m_State == STATE::STATE_HEX_FLOAT_READY) {
+                m_State == STATE::STATE_INT_OCT  ||m_State == STATE::STATE_PREFIX_ZERO) {
             reportResult(3);
+        }
+        else if(m_State == STATE::STATE_DEC_DOT  ||m_State == STATE::STATE_DEC_FLOAT||
+                m_State == STATE::STATE_HEX_FLOAT_READY){
+            reportResult(7);
         }
         else if(m_State==STATE::STATE_WAIT_EQUAL||m_State==STATE::STATE_WAIT_OR||m_State==STATE::STATE_WAIT_AND)
         {

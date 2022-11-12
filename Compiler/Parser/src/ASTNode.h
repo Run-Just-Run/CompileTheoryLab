@@ -44,12 +44,65 @@ namespace PARSER {
         }
 
         inline void setConstFlag(bool Flag){
+            if(Flag)flag|=(1<<4);
+            else flag&=INT32_MAX-(1<<4);
+        }
+
+        inline bool getConstFlag(){
+            return flag&(1<<4);
+        }
+
+        inline void setConstDeclFlag(bool Flag){
             if(Flag)flag|=(1<<2);
             else flag&=INT32_MAX-(1<<2);
         }
 
-        inline bool getConstFlag(){
+        inline bool getConstDeclFlag(){
             return flag&(1<<2);
+        }
+
+        inline void setRoot(bool Flag){
+            if(Flag)flag|=(1<<3);
+            else flag&=INT32_MAX-(1<<3);
+        }
+
+        inline bool getRoot(){
+            return flag&(1<<3);
+        }
+
+        inline void setArray(bool Flag){
+            if(Flag)flag|=(1<<5);
+            else flag&=INT32_MAX-(1<<5);
+        }
+
+        inline bool getArray(){
+            return flag&(1<<5);
+        }
+
+        inline void setDecl(bool Flag){
+            if(Flag)flag|=(1<<6);
+            else flag&=INT32_MAX-(1<<6);
+        }
+
+        inline bool getDecl(){
+            return flag&(1<<6);
+        }
+        inline void setFloat(bool Flag){
+            if(Flag)flag|=(1<<8);
+            else flag&=INT32_MAX-(1<<8);
+        }
+
+        inline bool getFloat(){
+            return flag&(1<<8);
+        }
+
+        inline void setInt(bool Flag){
+            if(Flag)flag|=(1<<7);
+            else flag&=INT32_MAX-(1<<7);
+        }
+
+        inline bool getInt(){
+            return flag&(1<<7);
         }
 
         inline int getUrgency(){
@@ -59,7 +112,13 @@ namespace PARSER {
     private:
         int flag=0;/*the first bit represent if this is an operator
  *                   the second bit represent if this is a function usage
- *                   the third bit represent if this is a const decl*/
+ *                   the third bit represent if this is a const decl
+ *                   the forth bit represent if this is the root
+ *                   the fifth bit represent if this is a const val
+ *                   the sixth bit represent if this is an array
+ *                   the seventh bit represent if this is a var decl
+ *                   the eighth bit represent if this is a int
+ *                   the ninth bit represent if this is a float*/
 
         std::vector<ASTNode*>children;
 

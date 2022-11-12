@@ -23,6 +23,8 @@ namespace PARSER
             m_Mode = mode;
         }
 
+
+
         virtual inline void setTokenBuffer(const std::vector<std::pair<int,std::string>>&v) =0 ;
         virtual inline void setPositionBuffer(const std::vector<std::vector<int>>&v) =0 ;
         virtual bool Run() =0 ;
