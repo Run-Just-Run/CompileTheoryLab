@@ -22,10 +22,14 @@ namespace PARSER {
         static int tempCount;
         static bool constSituation;
         static bool inDecl;
+        static bool isNum;
 
     private:
         static std::tuple<bool, std::string, bool> resolveHelp(ASTNode *root, int typeRes);
         static void reportRes(std::vector<std::string>);
+
+        static std::vector<int>tEntryList;
+        static std::vector<int>fEntryList;
     };
 }
 

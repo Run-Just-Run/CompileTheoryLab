@@ -61,7 +61,7 @@ rule CXX_STATIC_LIBRARY_LINKER__spdlog_Release
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\HP\CLionProjects\Compiler -BC:\Users\HP\CLionProjects\Compiler\cmake-build-release
+  command = "D:\JETBRAIN\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\dev\CompileTheoryLab\Compiler -BC:\dev\CompileTheoryLab\Compiler\cmake-build-release
   description = Re-running CMake...
   generator = 1
 

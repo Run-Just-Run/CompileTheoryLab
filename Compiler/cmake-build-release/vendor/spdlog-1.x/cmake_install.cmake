@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/HP/CLionProjects/Compiler/vendor/spdlog-1.x
+# Install script for directory: C:/dev/CompileTheoryLab/Compiler/vendor/spdlog-1.x
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

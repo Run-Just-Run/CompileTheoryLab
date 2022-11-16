@@ -56,9 +56,18 @@ namespace PARSER {
         void ParseIV();
         void ParseIV_();
         void ParseVD();
-        void ParseCOND();
         void ParseRE();
         void ParseRE_();
+
+        void ParseLOE();
+        void ParseLOE_();
+        void ParseLAE();
+        void ParseLAE_();
+        void ParseEE();
+        void ParseEE_();
+        void ParseEQ();
+
+        void ParseBlock();
 
         void errorHandle();
     private:
@@ -72,8 +81,11 @@ namespace PARSER {
         int urgency=0;
 
         bool inADD=0;
+        bool inBool=0;
         ASTNode*root;
         std::stack<ASTNode*>AST_stack;
+
+        int depth = 0;
 
         bool constSituation = 0;
     private:
@@ -82,5 +94,8 @@ namespace PARSER {
     };
 
     void PrintTree(ASTNode*);
+    bool Prior(std::string top, std::string now);
+    std::vector<std::vector<std::pair<int, std::string>>>Reverse_Polish(std::vector<std::pair<int, std::string>>token_buffer);
+
 }
 

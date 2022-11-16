@@ -39,6 +39,24 @@ namespace PARSER {
             return flag&(1<<1);
         }
 
+        inline void setIfFlag(bool Flag){
+            if(Flag)flag|=(1<<9);
+            else flag&=INT32_MAX-(1<<9);
+        }
+
+        inline bool getIfFlag(){
+            return flag&(1<<9);
+        }
+
+        inline void setWhileFlag(bool Flag){
+            if(Flag)flag|=(1<<10);
+            else flag&=INT32_MAX-(1<<10);
+        }
+
+        inline bool getWhileFlag(){
+            return flag&(1<<10);
+        }
+
         inline bool getOpFlag(){
             return flag&1;
         }
@@ -96,6 +114,15 @@ namespace PARSER {
             return flag&(1<<8);
         }
 
+        inline void setBlock(bool Flag){
+            if(Flag)flag|=(1<<11);
+            else flag&=INT32_MAX-(1<<11);
+        }
+
+        inline bool getBlock(){
+            return flag&(1<<11);
+        }
+
         inline void setInt(bool Flag){
             if(Flag)flag|=(1<<7);
             else flag&=INT32_MAX-(1<<7);
@@ -117,8 +144,11 @@ namespace PARSER {
  *                   the fifth bit represent if this is a const val
  *                   the sixth bit represent if this is an array
  *                   the seventh bit represent if this is a var decl
- *                   the eighth bit represent if this is a int
- *                   the ninth bit represent if this is a float*/
+ *                   the eighth bit represent if this is an int
+ *                   the ninth bit represent if this is a float
+ *                   the tenth bit represent if this is an if stmt
+ *                   the eleventh bit represent if this is a while stmt
+ *                   the twelfth bit represent if this is a block root*/
 
         std::vector<ASTNode*>children;
 
